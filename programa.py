@@ -1,7 +1,7 @@
 from bottle import *
 from lxml import etree
 import requests
-from sys import arg
+from sys import argv
 
 @route('/')
 def consulta():
