@@ -39,7 +39,7 @@ q:after{content:' „'; font-size:26px; line-height:0;}
 
 div.wrapper{display:block; width:100%; margin:0; padding:0; text-align:center;}
 
-.row1, .row1 a{color:red; background-color:black;}
+.row1, .row1 a{color:black; background-color:grey;}
 .row2{color:#979797; background-color:#FFFFFF;}
 .row2 a{color:#FF9900; background-color:#FFFFFF;}
 .row3, .row3 a{color:#919191; background-color:#232323;}
