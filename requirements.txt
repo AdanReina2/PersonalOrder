@@ -7,5 +7,4 @@ pytz
 requests
 six
 httplib2
-apiclient
 oauth2client
