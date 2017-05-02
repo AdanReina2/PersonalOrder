@@ -19,7 +19,7 @@ except ImportError:
 # If modifying these scopes, delete your previously saved credentials
 # at ~/.credentials/calendar-python-quickstart.json
 SCOPES = 'https://www.googleapis.com/auth/calendar.readonly'
-CLIENT_SECRET_FILE = 'clientsecret.json'
+CLIENT_SECRET_KEY = os.environ["CLIENT_SECRET_KEY"]
 APPLICATION_NAME = 'Google Calendar API Python Quickstart'
 
 def get_credentials():
