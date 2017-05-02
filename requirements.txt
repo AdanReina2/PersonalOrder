@@ -5,4 +5,3 @@ packaging
 requests
 httplib2
 oauth2client
-six
