@@ -48,6 +48,5 @@ def get_credentials():
             credentials = tools.run(flow, store)
         print('Storing credentials to ' + credential_path)
     return credentials
-
-
-run(host='0.0.0.0', port=argv[1])
+if __name__ == '__main__':
+    run(host='0.0.0.0', port=argv[1])
