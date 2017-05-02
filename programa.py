@@ -7,7 +7,7 @@ from sys import argv
 def consulta():
     return template("formulario.tpl")
 
-@route('/resultado',method="post")
+@route('/resultado')
 def resultado():
     print "Hola"
 
