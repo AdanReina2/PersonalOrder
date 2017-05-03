@@ -2,10 +2,13 @@ from bottle import get, post, route, run, template
 from lxml import etree
 import requests
 from sys import argv
+from oauth2client.contrib.appengine import AppAssertionCredentials
+
+credentials = AppAssertionCredentials('https://www.googleapis.com/auth/sqlservice.admin')
 
 @route('/')
 def consulta():
-    return template("formulario.tpl")
+    print credentials
 
 @route('/resultado')
 def resultado():
