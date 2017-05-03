@@ -29,7 +29,7 @@ def token_valido():
       token_ok = False
   else:
     token_ok = False
-  return token_ok
+  return template('nuevocalendario.tpl',token_ok=token_ok)
 
 @get('/calendar')
 def info_calendar():
@@ -53,10 +53,10 @@ def get_token():
 @get('/perfil')
 def info():
   if token_valido():
-    token=request.get_cookie("token", secret='some-secret-key')
+    token = request.get_cookie("token", secret='some-secret-key')
     oauth2 = OAuth2Session(client_id, token=token)
     r = oauth2.get('https://www.googleapis.com/oauth2/v1/userinfo')
-    doc=json.loads(r.content)
+    doc = json.loads(r.content)
     return '<p>%s</p><img src="%s"/><br/><a href="/logout">Cerrar</a>' % (doc["name"],doc["picture"])
   else:
     redirect('/calendar')
