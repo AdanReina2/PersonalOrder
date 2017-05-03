@@ -80,7 +80,7 @@ def nuevoevento():
     if token_valido():
         token = request.get_cookie("token", secret='some-secret-key')
         oauth2 = OAuth2Session(client_id, token=token)
-        r = oauth2.get('https://www.googleapis.com/calendar/v3/calendars/calendarId/events/')
+        r = oauth2.get('https://www.googleapis.com/calendar/v3/calendars/calendarId/events/adan.reina020513@gmail.com')
         doc = json.loads(r.content)
     return template('nuevoevento.tpl',doc=doc)
 
