@@ -11,7 +11,7 @@ import json
 client_id = os.environ["client_id"]
 client_secret = os.environ["client_secret"]
 redirect_uri = 'https://personalorder.herokuapp.com/callback'
-scope = 'https://www.googleapis.com/auth/calendar'
+scope = ['https://www.googleapis.com/auth/calendar','https://www.googleapis.com/auth/userinfo.profile']
 token_url = "https://accounts.google.com/o/oauth2/token"
 
 @route('/')
