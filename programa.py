@@ -74,8 +74,6 @@ def listareventos():
         r = oauth2.get('https://www.googleapis.com/calendar/v3/calendars')
         doc = json.loads(r.content)
         return doc
-    else:
-        redirect('/calendar')
     return template('listareventos.tpl')
 
 @route('/nuevoevento')
