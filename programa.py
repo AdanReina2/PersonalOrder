@@ -73,5 +73,29 @@ def salir():
 @route('/static/<filepath:path>')
 def server_static(filepath):
     return static_file(filepath, root='static')    
-    
+
+@route('/listareventos')
+def listareventos():
+    return template('listareventos.tpl')
+
+@route('/nuevoevento')
+def nuevoevento():
+    return template('nuevoevento.tpl')
+
+@route('/eliminarevento')
+def eliminarevento():
+    return template('eliminarevento.tpl')
+
+@route('/modificarevento')
+def modificarevento():
+    return template('modificarevento.tpl')
+
+@route('/nuevocalendario')
+def nuevocalendario():
+    return template('nuevocalendario.tpl')
+
+@route('/borrarcalendario')
+def borrarcalendario():
+    return template('borrarcalendario.tpl')
+
 run(host='0.0.0.0',port=argv[1])
