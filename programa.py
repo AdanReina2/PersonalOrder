@@ -99,12 +99,10 @@ def nuevoevento():
                                                         },
                                                         "summary": infoevent
                                                         }})
-#    if r.status_code == 200:
-#        return "<p>Evento creado</p>"
-#    else:
-#        return "<p>Evento no creado</p>"
- #       doc = json.loads(r.content)
-    return template('nuevoevento.tpl',doc=doc)
+    if r.status_code == 200:
+        return "<p>Evento creado</p>"
+    else:
+        return "<p>Evento no creado</p>"
 
 @route('/eliminarevento')
 def eliminarevento():
