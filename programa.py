@@ -75,6 +75,10 @@ def listareventos():
         doc = json.loads(r.content)
     return template('listareventos.tpl',doc=doc)
 
+@route('/formularionuevoevento')
+def formularionuevoevento():
+    return template('formularionuevoevento.tpl')
+
 @route('/nuevoevento')
 def nuevoevento():
     if token_valido():
