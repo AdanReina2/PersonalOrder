@@ -68,6 +68,14 @@ def salir():
 
 @route('/listareventos')
 def listareventos():
+    if token_valido():
+        token = request.get_cookie("token", secret='some-secret-key')
+        oauth2 = OAuth2Session(client_id, token=token)
+        r = oauth2.get('https://www.googleapis.com/calendar/v3/calendars')
+        doc = json.loads(r.content)
+        return doc
+    else:
+        redirect('/calendar')
     return template('listareventos.tpl')
 
 @route('/nuevoevento')
