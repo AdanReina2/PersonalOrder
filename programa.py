@@ -6,7 +6,7 @@ from oauth2client.service_account import ServiceAccountCredentials
 
 scopes = ['https://www.googleapis.com/auth/sqlservice.admin']
 
-credentials = ServiceAccountCredentials.from_json_keyfile_name('/path/to/keyfile.json', scopes=scopes)
+credentials = ServiceAccountCredentials.from_json_keyfile_name('key.json', scopes=scopes)
 
 @route('/')
 def consulta():
