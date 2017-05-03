@@ -52,19 +52,19 @@ def get_token():
   
 @get('/perfil')
 def info():
-  if token_valido():
-    token = request.get_cookie("token", secret='some-secret-key')
-    oauth2 = OAuth2Session(client_id, token=token)
-    r = oauth2.get('https://www.googleapis.com/oauth2/v1/userinfo')
-    doc = json.loads(r.content)
+    if token_valido():
+        token = request.get_cookie("token", secret='some-secret-key')
+        oauth2 = OAuth2Session(client_id, token=token)
+        r = oauth2.get('https://www.googleapis.com/oauth2/v1/userinfo')
+        doc = json.loads(r.content)
     return '<p>%s</p><img src="%s"/><br/><a href="/logout">Cerrar</a>' % (doc["name"],doc["picture"])
-  else:
-    redirect('/calendar')
+    else:
+        redirect('/calendar')
 
 @get('/logout')
 def salir():
-  response.set_cookie("token", '',max_age=0)
-  redirect('/log')  
+    response.set_cookie("token", '',max_age=0)
+    redirect('/log')  
 
 @route('/listareventos')
 def listareventos():
@@ -99,10 +99,10 @@ def nuevoevento():
                                                         },
                                                         "summary": infoevent
                                                         }})
-  if r.status_code == 200:
-    return "<p>Evento creado</p>"
-  else:
-    return "<p>Evento no creado</p>"
+    if r.status_code == 200:
+        return "<p>Evento creado</p>"
+    else:
+        return "<p>Evento no creado</p>"
  #       doc = json.loads(r.content)
     return template('nuevoevento.tpl',doc=doc)
 
