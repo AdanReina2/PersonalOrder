@@ -5,7 +5,7 @@
       <label>Categoria: </label>
       <INPUT type="text" name="cate">
       <INPUT>ID: </label>
-      <INPUT type="text" name="id" placeholder=cliente_id>
+      <INPUT type="text" name="id" placeholder={{cliente_id}}>
       <INPUT type="submit" value="Enviar">
 </form>
 %include('foot.tpl')
