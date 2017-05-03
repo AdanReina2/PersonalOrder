@@ -18,4 +18,7 @@
 <form action="/borrarcalendario" method="get">
       <INPUT type="submit" value="Borrar un calendario">
 </form>
+<form action="/log" method="get">
+      <INPUT type="submit" value="Ver información personal del usuario">
+</form>
 %include('foot.tpl')
