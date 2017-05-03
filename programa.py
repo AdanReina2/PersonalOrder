@@ -71,13 +71,17 @@ def listareventos():
     if token_valido():
         token = request.get_cookie("token", secret='some-secret-key')
         oauth2 = OAuth2Session(client_id, token=token)
-        s = etree.fromstring(oauth2.text.encode('utf-8'))
-        r = s.get('https://www.googleapis.com/calendar/v3/users/me/calendarList')
+        r = oauth2.get('https://www.googleapis.com/calendar/v3/users/me/calendarList')
         doc = json.loads(r.content)
     return template('listareventos.tpl',doc=doc)
 
 @route('/nuevoevento')
 def nuevoevento():
+    if token_valido():
+        token = request.get_cookie("token", secret='some-secret-key')
+        oauth2 = OAuth2Session(client_id, token=token)
+        r = oauth2.get('https://www.googleapis.com/calendar/v3/users/me/calendarList')
+        doc = json.loads(r.content)
     return template('nuevoevento.tpl')
 
 @route('/eliminarevento')
