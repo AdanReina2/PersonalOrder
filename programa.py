@@ -42,7 +42,7 @@ def info_calendar():
     response.set_cookie("oauth_state", state)
     redirect(authorization_url)
 
-@get('/oauth2callback')
+@get('/callback')
 def get_token():
 
   oauth2 = OAuth2Session(client_id, state=request.cookies.oauth_state,redirect_uri=redirect_uri)
