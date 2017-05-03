@@ -31,7 +31,7 @@ def token_valido():
     token_ok = False
   return token_ok
 
-@get('/calendar')
+@get('/log')
 def info_calendar():
   if token_valido():
     redirect("/perfil")
@@ -64,7 +64,7 @@ def info():
 @get('/logout')
 def salir():
   response.set_cookie("token", '',max_age=0)
-  redirect('/calendar')  
+  redirect('/log')  
 
 @route('/listareventos')
 def listareventos():
