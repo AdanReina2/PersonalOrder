@@ -16,11 +16,7 @@ token_url = "https://accounts.google.com/o/oauth2/token"
 
 @route('/')
 def inicio():
-    return template('inicio.tpl',client_id=client_id)
-
-@get('/google')
-def get_token():
-    return template('oauth2.tpl')
+    return template('inicio.tpl')
 
 def token_valido():
   token = request.get_cookie("token", secret='some-secret-key')
@@ -35,10 +31,10 @@ def token_valido():
     token_ok = False
   return token_ok
 
-@get('/youtube')
-def info_youtube():
+@get('/calendar')
+def info_calendar():
   if token_valido():
-    redirect("/perfil")
+    redirect("/")
   else:
     response.set_cookie("token", '',max_age=0)
     oauth2 = OAuth2Session(client_id, redirect_uri=redirect_uri,scope=scope)
@@ -68,11 +64,7 @@ def info():
 @get('/logout')
 def salir():
   response.set_cookie("token", '',max_age=0)
-  redirect('/youtube')
-
-@route('/static/<filepath:path>')
-def server_static(filepath):
-    return static_file(filepath, root='static')    
+  redirect('/youtube')  
 
 @route('/listareventos')
 def listareventos():
@@ -97,5 +89,9 @@ def nuevocalendario():
 @route('/borrarcalendario')
 def borrarcalendario():
     return template('borrarcalendario.tpl')
+
+@route('/static/<filepath:path>')
+def server_static(filepath):
+    return static_file(filepath, root='static')  
 
 run(host='0.0.0.0',port=argv[1])
