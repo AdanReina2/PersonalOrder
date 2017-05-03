@@ -34,7 +34,7 @@ def token_valido():
 @get('/calendar')
 def info_calendar():
   if token_valido():
-    redirect("/")
+    redirect("/perfil")
   else:
     response.set_cookie("token", '',max_age=0)
     oauth2 = OAuth2Session(client_id, redirect_uri=redirect_uri,scope=scope)
@@ -59,12 +59,12 @@ def info():
     doc=json.loads(r.content)
     return '<p>%s</p><img src="%s"/><br/><a href="/logout">Cerrar</a>' % (doc["name"],doc["picture"])
   else:
-    redirect('/youtube')
+    redirect('/calendar')
 
 @get('/logout')
 def salir():
   response.set_cookie("token", '',max_age=0)
-  redirect('/youtube')  
+  redirect('/calendar')  
 
 @route('/listareventos')
 def listareventos():
