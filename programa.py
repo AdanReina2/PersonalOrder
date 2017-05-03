@@ -29,7 +29,7 @@ def token_valido():
       token_ok = False
   else:
     token_ok = False
-  return template('nuevocalendario.tpl',token_ok=token_ok)
+  return token_ok
 
 @get('/calendar')
 def info_calendar():
