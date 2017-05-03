@@ -109,7 +109,7 @@ def nuevoevento():
 def formularioborrarevento():
     return template('formularioborrarevento.tpl')    
     
-@route('/eliminarevento')
+@route('/eliminarevento',method='post')
 def eliminarevento():
     if token_valido():
         idoldcal = request.forms.get('idoldcal')
@@ -118,7 +118,7 @@ def eliminarevento():
         oauth2 = OAuth2Session(client_id, token=token)
         url_base = 'https://www.googleapis.com/calendar/v3/calendars/'
         payload = {'calendarID':idoldcal,'events':'events','eventID':idoldevent}
-        r6 = oauth2.post(url_base,params=payload)
+        r6 = oauth2.delete(url_base,params=payload)
     
     estado = r6.status_code
     if estado == 204:
