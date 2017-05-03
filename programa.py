@@ -8,7 +8,7 @@ credentials = AppAssertionCredentials('https://www.googleapis.com/auth/sqlservic
 
 @route('/')
 def consulta():
-    print credentials
+    return template("formulario.tpl")
 
 @route('/resultado')
 def resultado():
