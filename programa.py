@@ -15,8 +15,8 @@ scope = 'https://www.googleapis.com/auth/calendar'
 token_url = "https://accounts.google.com/o/oauth2/token"
 
 @route('/')
-def formulario():
-    return template('formulario.tpl',client_id=client_id)
+def inicio():
+    return template('inicio.tpl',client_id=client_id)
 
 @get('/google')
 def get_token():
