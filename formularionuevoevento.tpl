@@ -9,5 +9,6 @@
       <INPUT type="text" name="endevent">
       <label>Información del evento: </label>
       <INPUT type="text" name="infoevent">
+      <INPUT type="submit" value="Crear Evento">
 </form>
 %include('foot.tpl')
