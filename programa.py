@@ -14,6 +14,10 @@ redirect_uri = 'https://personalorder.herokuapp.com/callback'
 scope = 'https://www.googleapis.com/auth/calendar'
 token_url = "https://accounts.google.com/o/oauth2/token"
 
+@route('/')
+def formulario():
+    return template('formulario.tpl')
+
 @get('/google')
 def get_token():
     return template('oauth2.tpl')
