@@ -99,7 +99,8 @@ def nuevoevento():
                                                         },
                                                         "summary": infoevent
                                                         }})
-    if r.status_code == 200:
+    estado = r.status_code
+    if estado == 200:
         return "<p>Evento creado</p>"
     else:
         return "<p>Evento no creado</p>"
