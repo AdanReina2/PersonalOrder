@@ -72,8 +72,8 @@ def listareventos():
         token = request.get_cookie("token", secret='some-secret-key')
         oauth2 = OAuth2Session(client_id, token=token)
         r3 = oauth2.get('https://www.googleapis.com/calendar/v3/users/me/calendarList')
-        doc1 = json.loads(r3.content)
-    return template('listareventos.tpl',doc=doc1)
+        doc = json.loads(r3.content)
+    return template('listareventos.tpl',doc=doc)
 
 @route('/formularionuevoevento')
 def formularionuevoevento():
