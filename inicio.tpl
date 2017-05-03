@@ -6,7 +6,7 @@
 <form action="/formularionuevoevento" method="get">
       <INPUT type="submit" value="Crear un nuevo evento">
 </form>
-<form action="/eliminarevento" method="get">
+<form action="/formularioborrarevento" method="get">
       <INPUT type="submit" value="Eliminar un evento">
 </form>
 <form action="/modificarevento" method="get">
