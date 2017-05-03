@@ -105,6 +105,10 @@ def nuevoevento():
     else:
         return "<p>Evento no creado</p>"
 
+@route('/formularioborrarevento')
+def formularioborrarevento():
+    return template('formularioborrarevento.tpl')    
+    
 @route('/eliminarevento')
 def eliminarevento():
     if token_valido():
