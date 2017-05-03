@@ -3,7 +3,7 @@
 <form action="/listareventos" method="get">
       <INPUT type="submit" value="Listar todos los eventos">
 </form>
-<form action="/nuevoevento" method="get">
+<form action="/formularionuevoevento" method="get">
       <INPUT type="submit" value="Crear un nuevo evento">
 </form>
 <form action="/eliminarevento" method="get">
