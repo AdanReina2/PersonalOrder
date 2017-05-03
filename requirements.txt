@@ -6,3 +6,7 @@ requests
 httplib2
 oauth2client
 google-api-python-client
+requests_oauthlib
+oauthlib
+urlparse
+json
