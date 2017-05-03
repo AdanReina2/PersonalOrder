@@ -79,7 +79,7 @@ def listareventos():
 def formularionuevoevento():
     return template('formularionuevoevento.tpl')
 
-@route('/nuevoevento')
+@route('/nuevoevento',method='post')
 def nuevoevento():
     if token_valido():
         idnewevent = request.forms.get('idnewevent')
