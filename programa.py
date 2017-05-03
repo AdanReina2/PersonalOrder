@@ -1,4 +1,4 @@
-from bottle import get, post, route, run, template
+from bottle import *
 from lxml import etree
 import requests
 from sys import argv
