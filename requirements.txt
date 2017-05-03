@@ -5,3 +5,4 @@ packaging
 requests
 httplib2
 oauth2client
+oauth2client.contrib.appengine
