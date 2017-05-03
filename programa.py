@@ -55,8 +55,8 @@ def info():
     if token_valido():
         token = request.get_cookie("token", secret='some-secret-key')
         oauth2 = OAuth2Session(client_id, token=token)
-        r = oauth2.get('https://www.googleapis.com/oauth2/v1/userinfo')
-        doc = json.loads(r.content)
+        r2 = oauth2.get('https://www.googleapis.com/oauth2/v1/userinfo')
+        doc = json.loads(r2.content)
         return '<p>%s</p><img src="%s"/><br/><a href="/logout">Cerrar</a>' % (doc["name"],doc["picture"])
     else:
         redirect('/calendar')
@@ -71,9 +71,9 @@ def listareventos():
     if token_valido():
         token = request.get_cookie("token", secret='some-secret-key')
         oauth2 = OAuth2Session(client_id, token=token)
-        r = oauth2.get('https://www.googleapis.com/calendar/v3/users/me/calendarList')
-        doc = json.loads(r.content)
-    return template('listareventos.tpl',doc=doc)
+        r3 = oauth2.get('https://www.googleapis.com/calendar/v3/users/me/calendarList')
+        doc1 = json.loads(r3.content)
+    return template('listareventos.tpl',doc=doc1)
 
 @route('/formularionuevoevento')
 def formularionuevoevento():
@@ -90,7 +90,7 @@ def nuevoevento():
         oauth2 = OAuth2Session(client_id, token=token)
         url_base = 'https://www.googleapis.com/calendar/v3/calendars/'
         payload = {'calendarID':idnewevent,'events':'events',}
-        r = oauth2.post(url_base,params=payload,data={{
+        r4 = oauth2.post(url_base,params=payload,data={{
                                                         "end": {
                                                          "date": endevent
                                                         },
@@ -99,7 +99,7 @@ def nuevoevento():
                                                         },
                                                         "summary": infoevent
                                                         }})
-    estado = r.status_code
+    estado = r4.status_code
     if estado == 200:
         return "<p>Evento creado</p>"
     else:
@@ -107,6 +107,29 @@ def nuevoevento():
 
 @route('/eliminarevento')
 def eliminarevento():
+    if token_valido():
+        idnewevent = request.forms.get('idnewevent')
+        startevent = request.forms.get('startevent')
+        endevent = request.forms.get('endevent')
+        infoevent = request.forms.get('infoevent')
+        token = request.get_cookie("token", secret='some-secret-key')
+        oauth2 = OAuth2Session(client_id, token=token)
+        url_base = 'https://www.googleapis.com/calendar/v3/calendars/'
+        payload = {'calendarID':idnewevent,'events':'events',}
+        r5 = oauth2.post(url_base,params=payload,data={{
+                                                        "end": {
+                                                         "date": endevent
+                                                        },
+                                                        "start": {
+                                                         "date": startevent
+                                                        },
+                                                        "summary": infoevent
+                                                        }})
+    estado = r5.status_code
+    if estado == 200:
+        return "<p>Evento creado</p>"
+    else:
+        return "<p>Evento no creado</p>"
     return template('eliminarevento.tpl')
 
 @route('/modificarevento')
