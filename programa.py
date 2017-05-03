@@ -78,11 +78,29 @@ def listareventos():
 @route('/nuevoevento')
 def nuevoevento():
     if token_valido():
+        idnewevent = request.forms.get('idnewevent')
+        startevent = request.forms.get('startevent')
+        endevent = request.forms.get('endevent')
+        infoevent = request.forms.get('infoevent')
         token = request.get_cookie("token", secret='some-secret-key')
         oauth2 = OAuth2Session(client_id, token=token)
-        r = oauth2.get('https://www.googleapis.com/calendar/v3/calendars/adan.reina020513@gmail.com/events/mttcce7m20mihpbc4mnlc5396s')
-        doc = json.loads(r.content)
-    return template('nuevoevento.tpl',doc=doc)
+        url_base = 'https://www.googleapis.com/calendar/v3/calendars/'
+        payload = {'calendarID':idnewevent,'events':'events',}
+        r = oauth2.post(url_base,params=payload,data={{
+                                                        "end": {
+                                                         "date": endevent
+                                                        },
+                                                        "start": {
+                                                         "date": startevent
+                                                        },
+                                                        "summary": infoevent
+                                                        }})
+ # if r.status_code == 200:
+ #   return "<p>Tweet properly sent</p>"
+ # else:
+ #   return "<p>Unable to send tweet</p>"+r.content)
+ #       doc = json.loads(r.content)
+ #   return template('nuevoevento.tpl',doc=doc)
 
 @route('/eliminarevento')
 def eliminarevento():
