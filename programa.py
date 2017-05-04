@@ -105,7 +105,7 @@ def nuevoevento():
             },
         }
         payload = {'key':key}
-        r4 = oauth2.post(url_base,body=event,params=payload)
+        r4 = oauth2.post(url_base,event,params=payload)
         
         estado = r4.status_code
         if estado == 200:
