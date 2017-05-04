@@ -23,6 +23,7 @@
  -				<li><a href="/modificarevento">Modificar Evento</a></li>
  -				<li><a href="/nuevocalendario">Crear Calendario</a></li>
  -				<li><a href="/borrarcalendario">Borrar Calendario</a></li>
+ -				<li><a href="/log">Perfil Usuario</a></li>
       			</ul>
     		</nav>
   	</header>
