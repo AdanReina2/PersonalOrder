@@ -111,8 +111,8 @@ def eliminarevento():
         idoldevent = request.forms.get('idoldevent')
         token = request.get_cookie("token", secret='some-secret-key')
         oauth2 = OAuth2Session(client_id, token=token)
-        url_base = 'https://www.googleapis.com/calendar/v3/calendars/'
-        payload = {'calendarID':idoldcal,'events':'events','eventID':idoldevent,'key':key}
+        url_base = 'https://www.googleapis.com/calendar/v3/calendars/'+idoldcal+'/events/'+idoldevent
+        payload = {'key':key}
         r6 = oauth2.delete(url_base,params=payload)
     
         estado = r6.status_code
