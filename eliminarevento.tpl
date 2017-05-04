@@ -1,3 +1,3 @@
 %include('header.tpl')
-<h1>Eliminar un evento existente</h1>
+<h1>{{r6}}</h1>
 %include('foot.tpl')
