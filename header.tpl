@@ -24,36 +24,30 @@
 		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
 		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
 	</head>
-	<body class="homepage">
-
 	<!-- Header -->
-		<div id="header">
-			<div id="logo-wrapper">
-				<div class="container">
-						
-					<!-- Logo -->
-						<div id="logo">
-							<h1><a href="#">Colorized</a></h1>
-							<span>Design by TEMPLATED</span>
-							<a href="/"><img alt="logo" src="static/images/icon.svg"/></a></div>
-							<h1><a>Personal Order</a></h1>
-							<h2><a>Administrador de eventos del calendario de Google, con funcionalidades de Google Maps</a></h2>
-						</div>
-					
-				</div>
-			</div>			
-			<div class="container">
-				<!-- Nav -->
-					<nav id="nav">
-						<ul>
-							<li><a href="/">Inicio</a></li>
-							<li><a href="/listareventos">Listar Eventos</a></li>
-							<li><a href="/formularionuevoevento">Crear Evento</a></li>
-							<li><a href="/formularioborrarevento">Eliminar Evento</a></li>
-							<li><a href="/modificarevento">Modificar Evento</a></li>
-							<li><a href="/nuevocalendario">Crear Calendario</a></li>
-							<li><a href="/borrarcalendario">Borrar Calendario</a></li>
-						</ul>
-					</nav>
+	<div id="header">
+		<div id="logo-wrapper">
+			<div class="container">		
+				<div id="logo">
+					<h1><a href="#">Colorized</a></h1>
+					<span>Design by TEMPLATED</span>
+					<a href="/"><img alt="logo" src="static/images/icon.svg"/></a></div>
+					<h1><a>Personal Order</a></h1>
+					<h2><a>Administrador de eventos del calendario de Google, con funcionalidades de Google Maps</a></h2>
+				</div>				
 			</div>
-		</div
+		</div>
+		<div class="container">
+			<nav id="nav">
+				<ul>
+					<li><a href="/">Inicio</a></li>
+					<li><a href="/listareventos">Listar Eventos</a></li>
+					<li><a href="/formularionuevoevento">Crear Evento</a></li>
+					<li><a href="/formularioborrarevento">Eliminar Evento</a></li>
+					<li><a href="/modificarevento">Modificar Evento</a></li>
+					<li><a href="/nuevocalendario">Crear Calendario</a></li>
+					<li><a href="/borrarcalendario">Borrar Calendario</a></li>
+				</ul>
+			</nav>
+		</div>
+	</div>
