@@ -130,8 +130,10 @@ def eliminarevento():
     
         estado = r6.status_code
         if estado == 204:
-            return template('eliminarevento.tpl',estado=r6)
+            estado = "Se ha eliminado correctamente el evento "+idoldcal
+            return template('eliminarevento.tpl',estado=estado)
         else:
+            estado = "No se ha eliminado correctamente el evento "+idoldcal
             return template('eliminarevento.tpl',estado=r6)
     return template('eliminarevento.tpl')
 
