@@ -42,7 +42,7 @@ div.wrapper{display:inline; width:100%; margin:0; padding:0;}
 .row1, .row1 a{background-color:#D2D2D2;}
 .row2{color:#979797; background-color:#FFFFFF;}
 .row2 a{color:#FF9900; background-color:#FFFFFF;}
-.row3, .row3 a{color:#919191; background-color:#232323;}
+.row3, .row3 a{color:white; background-color:black;}
 
 /*----------------------------------------------Generalise-------------------------------------*/
 
@@ -145,5 +145,5 @@ input, textarea, select{font-size:12px; font-family:Helvetica;}
 /*----------------------------------------------Footer-------------------------------------*/
 
 #footer{padding:10px 0;background-color:#404040}
-#footer p{margin:0; padding:0;background-color:#404040}
+#footer p{margin:0; padding:0;background-color:black}
 #footer a{margin:0; padding:0;background-color:#404040}
