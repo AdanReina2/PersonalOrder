@@ -10,9 +10,11 @@
 <div class="wrapper row1">
 	<header id="header" class="clear">
 		<div id="hgroup">
-			<div><a href="/"><img alt="logo" src="static/images/icon.svg"/></a></div>
-			<h1><a>Personal Order</a></h1>
-			<h2><a>Administrador de eventos del calendario de Google, con funcionalidades de Google Maps</a></h2>
+			<div>
+				<a href="/"><img alt="logo" src="static/images/icon.svg"/></a>
+				<h1><a>Personal Order</a></h1>
+				<h2><a>Administrador de eventos del calendario de Google, con funcionalidades de Google Maps</a></h2>
+			</div>
 		</div>
     		<nav>
       			<ul>
