@@ -101,9 +101,9 @@ def nuevoevento():
                                                         }})
         estado = r4.status_code
         if estado == 200:
-            return "<p>Evento creado</p>"
+            return template('nuevoevento.tpl',estado='Evento Creado')
         else:
-            return "<p>Evento no creado</p>"
+            return template('nuevoevento.tpl',estado='Evento no creado')
 
 @route('/formularioborrarevento')
 def formularioborrarevento():
