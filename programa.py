@@ -129,7 +129,7 @@ def eliminarevento():
         r6 = oauth2.delete(url_base,params=payload)
     
         estado = r6.status_code
-        if estado == 200:
+        if estado == 204:
             return template('eliminareventobien.tpl')
         else:
             return template('eliminareventomal.tpl')
