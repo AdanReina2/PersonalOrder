@@ -58,8 +58,7 @@ def info():
         oauth2 = OAuth2Session(client_id, token=token)
         r2 = oauth2.get('https://www.googleapis.com/oauth2/v1/userinfo')
         doc = json.loads(r2.content)
-        return doc
-        #return '<p>%s</p><img src="%s"/><br/><a href="/logout">Cerrar</a>' % (doc["name"],doc["picture"])
+        return '<p>%s</p><img src="%s"/><br/><a href="/logout">Cerrar</a>' % (doc["name"],doc["picture"])
     else:
         redirect('/calendar')
 
