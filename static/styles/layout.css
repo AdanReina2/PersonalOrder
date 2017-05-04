@@ -23,7 +23,7 @@ code{font-weight:normal; font-style:normal; font-family:Helvetica;}
 .fl_right{float:right;}
 
 img{margin:0; padding:0; border:none; line-height:normal; vertical-align:middle;}
-.imgholder, .imgl, .imgr{padding:4px; border:1px solid #D6D6D6; text-align:center;}
+.imgholder, .imgl, .imgr{padding:4px; border:1px solid #D6D6D6;}
 .imgl{float:left; margin:0 15px 15px 0; clear:left;}
 .imgr{float:right; margin:0 0 15px 15px; clear:right;}
 
@@ -37,7 +37,7 @@ q:after{content:' „'; font-size:26px; line-height:0;}
 
 /* ----------------------------------------------Wrapper-------------------------------------*/
 
-div.wrapper{display:block; width:100%; margin:0; padding:0; text-align:center;}
+div.wrapper{display:block; width:100%; margin:0; padding:0;}
 
 .row1, .row1 a{color:black; background-color:grey;}
 .row2{color:#979797; background-color:#FFFFFF;}
