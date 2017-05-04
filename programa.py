@@ -92,9 +92,7 @@ def nuevoevento():
         locaevent = request.forms.get('locaevent')
         token = request.get_cookie("token", secret='some-secret-key')
         oauth2 = OAuth2Session(client_id, token=token)
-        #url_base = 'https://www.googleapis.com/calendar/v3/calendars/'+idnewevent+'/events'
-        #payload = {'key':key}
-        #r4 = oauth2.post(url_base,params=payload,body=body)
+        url_base = 'https://www.googleapis.com/calendar/v3/calendars/'+idnewevent+'/events'
         event = {
             'summary': nameevent,
             'location': locaevent,
@@ -106,15 +104,14 @@ def nuevoevento():
                 'date': endevent,
             },
         }
+        payload = {'key':key}
+        r4 = oauth2.post(url_base,body=event,params=payload)
         
-        event = service.events().insert(calendarId=idnewevent, body=event).execute()
-        evencreado = 'Evento creado: %s' % (event.get('htmlLink'))
-        return template('nuevoevento.tpl',evencreado=evencreado)    
-        #estado = r4.status_code
-        #if estado == 200:
-        #    return template('nuevoevento.tpl',estado=r4)
-        #else:
-        #    return template('nuevoevento.tpl',estado=r4)
+        estado = r4.status_code
+        if estado == 200:
+            return template('nuevoevento.tpl',estado=r4)
+        else:
+            return template('nuevoevento.tpl',estado=r4)
 
 @route('/formularioborrarevento')
 def formularioborrarevento():
