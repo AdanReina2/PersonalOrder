@@ -13,6 +13,7 @@ client_secret = os.environ["client_secret"]
 redirect_uri = 'https://personalorder.herokuapp.com/callback'
 scope = ['https://www.googleapis.com/auth/calendar','https://www.googleapis.com/auth/userinfo.profile']
 token_url = "https://accounts.google.com/o/oauth2/token"
+key = 'AIzaSyAuWFWJGNbePpsc62P8D4QzFgmysbIz99Q'
 
 @route('/')
 def inicio():
@@ -91,7 +92,7 @@ def nuevoevento():
         oauth2 = OAuth2Session(client_id, token=token)
         url_base = 'https://www.googleapis.com/calendar/v3/calendars/'
         payload = {'calendarID':idnewevent,'events':'events'}
-        r4 = oauth2.post(url_base,params=payload,data={{
+        r4 = oauth2.post(url_base,params=payload,data={
                                                         "end": {
                                                          "date": endevent
                                                         },
@@ -99,7 +100,7 @@ def nuevoevento():
                                                          "date": startevent
                                                         },
                                                         "summary": infoevent
-                                                        }})
+                                                        },key)
         estado = r4.status_code
         if estado == 200:
             return template('nuevoevento.tpl',estado='Evento Creado')
@@ -118,7 +119,7 @@ def eliminarevento():
         token = request.get_cookie("token", secret='some-secret-key')
         oauth2 = OAuth2Session(client_id, token=token)
         url_base = 'https://www.googleapis.com/calendar/v3/calendars/'
-        payload = {'calendarID':idoldcal,'events':'events','eventID':idoldevent}
+        payload = {'calendarID':idoldcal,'events':'events','eventID':idoldevent,'key':key}
         r6 = oauth2.delete(url_base,params=payload)
     
         estado = r6.status_code
