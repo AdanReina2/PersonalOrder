@@ -17,9 +17,9 @@
 		<script src="js/skel-panels.min.js"></script>
 		<script src="js/init.js"></script>
 		<noscript>
-			<link rel="stylesheet" href="css/skel-noscript.css" />
-			<link rel="stylesheet" href="css/style.css" />
-			<link rel="stylesheet" href="css/style-desktop.css" />
+			<link rel="stylesheet" href="/styles/css/skel-noscript.css" />
+			<link rel="stylesheet" href="/styles/css/style.css" />
+			<link rel="stylesheet" href="/styles/css/style-desktop.css" />
 		</noscript>
 		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
 		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
@@ -35,7 +35,7 @@
 						<div id="logo">
 							<h1><a href="#">Colorized</a></h1>
 							<span>Design by TEMPLATED</span>
-							<div><a href="/"><img alt="logo" src="static/images/icon.svg"/></a></div>
+							<a href="/"><img alt="logo" src="static/images/icon.svg"/></a></div>
 							<h1><a>Personal Order</a></h1>
 							<h2><a>Administrador de eventos del calendario de Google, con funcionalidades de Google Maps</a></h2>
 						</div>
@@ -56,5 +56,4 @@
 						</ul>
 					</nav>
 			</div>
-		</div>
-	<!-- Header -->
+		</div
