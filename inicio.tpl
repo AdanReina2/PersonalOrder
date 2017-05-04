@@ -1,5 +1,5 @@
 %include('header.tpl')
-<h1>Bienvenido a Personal Order, ¿Que desea hacer?</h1>
+<h1>Bienvenido a Personal Order, ¿Que desea hacer?{{key}}</h1>
 <form action="/listareventos" method="get">
       <INPUT type="submit" value="Listar todos los eventos">
 </form>
