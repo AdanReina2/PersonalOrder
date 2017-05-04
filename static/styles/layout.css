@@ -50,7 +50,7 @@ div.wrapper{display:block; width:100%; margin:0; padding:0; text-align:center;}
 
 nav ul{margin:0; padding:0; list-style:none;}
 
-h1, h2, h3, h4, h5, h6{margin:0; padding:0; font-size:22px; font-weight:normal; font-style:italic; line-height:normal; background-color:blue; color:white;}
+h1, h2, h3, h4, h5, h6{margin:0; padding:0; font-size:22px; font-weight:normal; font-style:italic; line-height:normal; background-color:#404040; color:white;}
 
 address{font-style:normal;}
 
@@ -144,5 +144,5 @@ input, textarea, select{font-size:12px; font-family:Georgia,"Times New Roman",Ti
 
 /*----------------------------------------------Footer-------------------------------------*/
 
-#footer{padding:20px 0;}
+#footer{padding:10px 0;background-color:#404040}
 #footer p{margin:0; padding:0;}
