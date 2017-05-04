@@ -1,3 +1,3 @@
 %include('header.tpl')
-<h1>{{estado}}</h1>
+<h1>{{respuesta}}</h1>
 %include('foot.tpl')
