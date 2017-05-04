@@ -1,3 +1,3 @@
-%include('header.tpl')
+%include('styles/header.tpl')
 <h1>Borrar un calendario existente</h1>
 %include('foot.tpl')
