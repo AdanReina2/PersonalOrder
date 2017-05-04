@@ -73,6 +73,7 @@ def listareventos():
         oauth2 = OAuth2Session(client_id, token=token)
         r3 = oauth2.get('https://www.googleapis.com/calendar/v3/users/me/calendarList')
         doc = json.loads(r3.content)
+        doc = etree.fromstring(doc.text.encode('utf-8'))
     return template('listareventos.tpl',doc=doc)
 
 @route('/formularionuevoevento')
