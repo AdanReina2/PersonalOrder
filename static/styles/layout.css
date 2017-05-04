@@ -92,8 +92,8 @@ input, textarea, select{font-size:12px; font-family:Georgia,"Times New Roman",Ti
 #header nav ul{padding:0 20px;}
 #header nav li{display:inline; text-transform:uppercase;}
 #header nav li.last{margin-right:0;}
-#header nav li a{color:white; background-color:#D2D2D2;}
-#header nav li a:hover{color:black; background-color:#D2D2D2;}
+#header nav li a{color:#404040; background-color:#D2D2D2;}
+#header nav li a:hover{color:blue; background-color:#D2D2D2;}
 
 /*----------------------------------------------Content Area-------------------------------------*/
 
@@ -145,4 +145,5 @@ input, textarea, select{font-size:12px; font-family:Georgia,"Times New Roman",Ti
 /*----------------------------------------------Footer-------------------------------------*/
 
 #footer{padding:10px 0;background-color:#404040}
-#footer p{margin:0; padding:0;}
+#footer p{margin:0; padding:0;background-color:#404040}
+#footer a{margin:0; padding:0;background-color:#404040}
