@@ -90,10 +90,10 @@ input, textarea, select{font-size:12px; font-family:Georgia,"Times New Roman",Ti
 
 #header nav{display:block; width:100%; margin:0; padding:10px 0; color:white; background-color:#D2D2D2; clear:both;}
 #header nav ul{padding:0 20px;}
-#header nav li{display:inline; text-transform:uppercase;}
+#header nav li{display:inline; text-transform:uppercase; padding:10px}
 #header nav li.last{margin-right:0;}
-#header nav li a{color:#404040; background-color:#D2D2D2;}
-#header nav li a:hover{color:blue; background-color:#D2D2D2;}
+#header nav li a{color:#404040; background-color:#D2D2D2;font-weight:bold}
+#header nav li a:hover{color:blue; background-color:#D2D2D2;font-weight:bold}
 
 /*----------------------------------------------Content Area-------------------------------------*/
 
