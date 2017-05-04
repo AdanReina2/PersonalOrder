@@ -3,7 +3,7 @@
 <head>
 <title>Personal Order</title>
 <meta charset="iso-8859-1">
-<link rel="stylesheet" href="/styles/css/style.css" type="text/css">
+<link rel="stylesheet" href="/static/style/layout.css" type="text/css">
 <!--[if lt IE 9]><script src="scripts/html5shiv.js"></script><![endif]-->
 </head>
 <body>
