@@ -88,18 +88,33 @@ def nuevoevento():
         startevent = request.forms.get('startevent')
         endevent = request.forms.get('endevent')
         infoevent = request.forms.get('infoevent')
+        nameevent = request.forms.get('nameevent')
+        locaevent = request.forms.get('locaevent')
         token = request.get_cookie("token", secret='some-secret-key')
         oauth2 = OAuth2Session(client_id, token=token)
-        url_base = 'https://www.googleapis.com/calendar/v3/calendars/'+idnewevent+'/events'
-        body = {"end": {"date": endevent},"start": {"date": startevent},"summary": infoevent}
-        payload = {'key':key}
-        r4 = oauth2.post(url_base,params=payload,body=body)
+        #url_base = 'https://www.googleapis.com/calendar/v3/calendars/'+idnewevent+'/events'
+        #payload = {'key':key}
+        #r4 = oauth2.post(url_base,params=payload,body=body)
+        event = {
+            'summary': nameevent,
+            'location': locaevent,
+            'description': infoevent,
+            'start': {
+                'date': startevent,
+            },
+            'end': {
+                'date': endevent,
+            },
+        }
         
-        estado = r4.status_code
-        if estado == 200:
-            return template('nuevoevento.tpl',estado=r4)
-        else:
-            return template('nuevoevento.tpl',estado=r4)
+        event = service.events().insert(calendarId=idnewevent, body=event).execute()
+        evencreado = 'Evento creado: %s' % (event.get('htmlLink'))
+        return template('nuevoevento.tpl',evencreado=evencreado)    
+        #estado = r4.status_code
+        #if estado == 200:
+        #    return template('nuevoevento.tpl',estado=r4)
+        #else:
+        #    return template('nuevoevento.tpl',estado=r4)
 
 @route('/formularioborrarevento')
 def formularioborrarevento():
