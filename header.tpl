@@ -17,7 +17,7 @@
     		<nav>
       			<ul>
         			<li><a href="/">Inicio</a></li>
-				<li><a href="/listareventos">Listar Eventos</a></li>
+ -				<li><a href="/listareventos">Listar Eventos</a></li>
  -				<li><a href="/formularionuevoevento">Crear Evento</a></li>
  -				<li><a href="/formularioborrarevento">Eliminar Evento</a></li>
  -				<li><a href="/modificarevento">Modificar Evento</a></li>
