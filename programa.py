@@ -89,7 +89,7 @@ def nuevoevento():
         token = request.get_cookie("token", secret='some-secret-key')
         oauth2 = OAuth2Session(client_id, token=token)
         url_base = 'https://www.googleapis.com/calendar/v3/calendars/'
-        payload = {'calendarID':idnewevent,'events':'events',}
+        payload = {'calendarID':idnewevent,'events':'events'}
         r4 = oauth2.post(url_base,params=payload,data={{
                                                         "end": {
                                                          "date": endevent
@@ -99,11 +99,11 @@ def nuevoevento():
                                                         },
                                                         "summary": infoevent
                                                         }})
-    estado = r4.status_code
-    if estado == 200:
-        return "<p>Evento creado</p>"
-    else:
-        return "<p>Evento no creado</p>"
+        estado = r4.status_code
+        if estado == 200:
+            return "<p>Evento creado</p>"
+        else:
+            return "<p>Evento no creado</p>"
 
 @route('/formularioborrarevento')
 def formularioborrarevento():
@@ -120,11 +120,11 @@ def eliminarevento():
         payload = {'calendarID':idoldcal,'events':'events','eventID':idoldevent}
         r6 = oauth2.delete(url_base,params=payload)
     
-    estado = r6.status_code
-    if estado == 204:
-        return "<p>Evento eliminado</p>"
-    else:
-        return "<p>Evento no eliminado</p>"
+        estado = r6.status_code
+        if estado == 204:
+            return "<p>Evento eliminado</p>"
+        else:
+            return "<p>Evento no eliminado</p>"
     return template('eliminarevento.tpl')
 
 @route('/modificarevento')
