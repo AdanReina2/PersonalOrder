@@ -79,7 +79,7 @@ input, textarea, select{font-size:12px; font-family:Helvetica;}
 
 #header{padding:15px 0;background-color:#D2D2D2}
 
-#header #hgroup{float:left; margin:0 0 10px 0;}
+#header #hgroup{float:left; margin:0 0 10px 0;display:inline}
 #header #hgroup h1, #header #hgroup h2{font-weight:normal; font-style:normal; text-transform:none;}
 #header #hgroup h1{font-size:36px;color:blue}
 #header #hgroup h2{font-size:14px;color:blue}
