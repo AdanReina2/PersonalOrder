@@ -1,4 +1,4 @@
-%include('header.tpl')
+%include('styles/header.tpl')
 <h1>Introduce el ID del calendario donde quieres crear el nuevo evento.</h1>
 <form action="/nuevoevento" method="post">
       <label>Nombre del Calendario: </label>
