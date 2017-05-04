@@ -13,11 +13,11 @@ client_secret = os.environ["client_secret"]
 redirect_uri = 'https://personalorder.herokuapp.com/callback'
 scope = ['https://www.googleapis.com/auth/calendar','https://www.googleapis.com/auth/userinfo.profile']
 token_url = "https://accounts.google.com/o/oauth2/token"
-key = 'AIzaSyAuWFWJGNbePpsc62P8D4QzFgmysbIz99Q'
+key = os.environ["KEY_API"]
 
 @route('/')
 def inicio():
-    return template('inicio.tpl')
+    return template('inicio.tpl',key=key)
 
 def token_valido():
   token = request.get_cookie("token", secret='some-secret-key')
