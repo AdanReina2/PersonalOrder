@@ -1,4 +1,4 @@
-%include('styles/header.tpl')
+%include('header.tpl')
 <h1>Introduce los datos del evento que quieres eliminar</h1>
 <form action="/eliminarevento" method="post">
       <label>ID del Calendario: </label>
