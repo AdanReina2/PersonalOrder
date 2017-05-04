@@ -91,7 +91,7 @@ def nuevoevento():
         token = request.get_cookie("token", secret='some-secret-key')
         oauth2 = OAuth2Session(client_id, token=token)
         url_base = 'https://www.googleapis.com/calendar/v3/calendars/'
-        payload = {'calendarID':idnewevent,'events':'events','data':{"end": {"date": endevent},"start": {"date": startevent},"summary": infoevent},'key':key}
+        payload = {'calendarID':idnewevent,'events':'events','data':{"end": {"date": endevent},"start": {"date": startevent},"summary": infoevent}}
         r4 = oauth2.post(url_base,params=payload)
         
         estado = r4.status_code
