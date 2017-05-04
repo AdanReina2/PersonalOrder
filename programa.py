@@ -130,11 +130,11 @@ def eliminarevento():
     
         estado = r6.status_code
         if estado == 204:
-            estado = "Se ha eliminado correctamente el evento "+idoldcal
-            return template('eliminarevento.tpl',estado=estado)
+            respuesta = "Se ha eliminado correctamente el evento "+idoldcal
+            return template('eliminarevento.tpl',respuesta=respuesta)
         else:
-            estado = "No se ha eliminado correctamente el evento "+idoldcal
-            return template('eliminarevento.tpl',estado=r6)
+            respuesta = "No se ha eliminado correctamente el evento "+idoldcal
+            return template('eliminarevento.tpl',respuesta=respuesta)
     return template('eliminarevento.tpl')
 
 @route('/modificarevento')
