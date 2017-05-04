@@ -113,7 +113,7 @@ def eliminarevento():
         oauth2 = OAuth2Session(client_id, token=token)
         url_base = 'https://www.googleapis.com/calendar/v3/calendars/'
         payload = {'calendarID':idoldcal,'events':'events','eventID':idoldevent,'key':key}
-        r6 = oar4uth2.delete(url_base,params=payload)
+        r6 = oauth2.delete(url_base,params=payload)
     
         estado = r6.status_code
         if estado == 204:
