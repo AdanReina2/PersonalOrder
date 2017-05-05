@@ -105,13 +105,8 @@ def nuevoevento():
         }
         payload = {'key':key}
         r4 = oauth2.post(url_base,data=event,params=payload)
+        return template('nuevoevento.tpl',estado=r4)
         
-        estado = r4.status_code
-        if estado == 200:
-            return template('nuevoevento.tpl',estado=r4)
-        else:
-            return template('nuevoevento.tpl',estado=r4)
-
 @route('/formularioborrarevento')
 def formularioborrarevento():
     return template('formularioborrarevento.tpl')    
