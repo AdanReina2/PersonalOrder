@@ -11,7 +11,7 @@
 	<header id="header" class="clear">
 		<div id="hgroup">
 			<div>
-				<a href="/"><img alt="logo" src="static/images/icon.svg"/></a>
+				<a href="/"><img alt="logo" src="static/images/logopersonalorder.png"/></a>
 				<h1><a>Personal Order</a></h1>
 				<h2><a>Administrador de eventos del calendario de Google, con funcionalidades de Google Maps</a></h2>
 			</div>
