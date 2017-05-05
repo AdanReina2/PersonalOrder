@@ -94,7 +94,7 @@ def nuevoevento():
         headers = {'Content-Type': 'application/json'}
 
         url_base = 'https://www.googleapis.com/calendar/v3/calendars/'+idnewevent+'/events'
-        event = {
+        event =[ {
             'summary': nameevent,
             'location': locaevent,
             'description': infoevent,
@@ -104,7 +104,7 @@ def nuevoevento():
             'end': {
                 'date': endevent,
             },
-        }
+        }]
         payload = {'key':key}
         r4 = oauth2.post(url_base,data=event,params=payload,headers=headers)
         return template('nuevoevento.tpl',estado=r4)
