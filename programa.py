@@ -91,6 +91,8 @@ def nuevoevento():
         locaevent = request.forms.get('locaevent')
         token = request.get_cookie("token", secret='some-secret-key')
         oauth2 = OAuth2Session(client_id, token=token)
+        headers = {'Content-Type': 'application/json'}
+
         url_base = 'https://www.googleapis.com/calendar/v3/calendars/'+idnewevent+'/events'
         event = {
             'summary': nameevent,
@@ -104,7 +106,7 @@ def nuevoevento():
             },
         }
         payload = {'key':key}
-        r4 = oauth2.post(url_base,data=event,params=payload)
+        r4 = oauth2.post(url_base,data=event,params=payload,headers=headers)
         return template('nuevoevento.tpl',estado=r4)
         
 @route('/formularioborrarevento')
