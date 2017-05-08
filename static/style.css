@@ -498,7 +498,7 @@ legend {
 	background: -ms-linear-gradient(top, white 0%,white 100%); /* IE10+ */
 	background: linear-gradient(top, white 0%,white 100%); /* W3C */
 	
-	color: #fff;
+	color: black;
 	border-color: transparent;
 	border-radius: 10px 0 10px 0;
 	font-weight: bold;
