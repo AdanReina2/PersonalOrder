@@ -33,7 +33,7 @@
     <header id="header" class="clearfix" role="banner">
     
         <hgroup>
-            <h1 id="site-title"><a href="/"><img src="/static/images/noposter.png"/></a></h1>
+            <h1 id="site-title"><a href="/"><img src="/static/images/logopresonalorder.png"/></a></h1>
             <h2 id="site-description">This is an awesome description of the site!</h2>
         </hgroup>
     
