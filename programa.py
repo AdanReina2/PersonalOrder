@@ -99,6 +99,7 @@ def nuevoevento():
         token = request.get_cookie("token", secret='some-secret-key')
         oauth2 = OAuth2Session(client_id, token=token)
         headers = {'Content-Type': 'application/json'}
+
         url_base = 'https://www.googleapis.com/calendar/v3/calendars/'+idnewevent+'/events'
         event = {
             'summary': nameevent,
