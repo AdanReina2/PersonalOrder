@@ -119,7 +119,7 @@ ol, ul, dd, pre, table, fieldset {
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'Droid Serif', sans-serif;
-	text-shadow: 0 1px 0 ;
+	color: white;
 }
 
 h1 {

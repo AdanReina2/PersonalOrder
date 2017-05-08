@@ -35,7 +35,12 @@
     
         <hgroup>
             <h1 id="site-title"><a href="/">PersonalOrder</a></h1>
-            <h2 id="site-description"><a href="/log">Login Usuario</a></h2>
+            <nav id="menu" class="clearfix" role="navigation">
+                <ul> 
+                    <li><a href="/log">Perfil Usuario</a></li>
+                </ul>
+            </nav>
+            <!--<h2 id="site-description"><a href="/log">Login Usuario</a></h2>-->
         </hgroup>
     
     </header> <!-- #header -->
