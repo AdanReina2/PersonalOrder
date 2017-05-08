@@ -1,4 +1,6 @@
 %include('header.tpl')
 <h1>Listar eventos</h1>
-{{nombres}}
+%for a in lista:
+	<a>{{a}}</a>
+%end
 %include('foot.tpl')
