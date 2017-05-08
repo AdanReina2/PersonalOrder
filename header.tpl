@@ -6,10 +6,10 @@
 -->
 <html>
 	<head>
-		<title>Intensify by TEMPLATED</title>
+		<title>MySounData</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="static2/assets/css/main.css" />
+		<link rel="stylesheet" href="static/assets/css/main.css" />
 	</head>
 	<body>
 
@@ -18,7 +18,7 @@
 				<nav class="left">
 					<a href="#menu"><span>Menu</span></a>
 				</nav>
-				<a href="index.html" class="logo">intensify</a>
+				<a href="index.html" class="logo">MySounData</a>
 				<nav class="right">
 					<a href="#" class="button alt">Log in</a>
 				</nav>
@@ -39,4 +39,4 @@
 				<ul class="actions vertical">
 					<li><a href="#" class="button fit">Login</a></li>
 				</ul>
-			</nav>    
+			</nav>
