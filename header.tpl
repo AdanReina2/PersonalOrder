@@ -35,7 +35,8 @@
     
         <hgroup>
             <h1 id="site-title"><a href="/">PersonalOrder</a></h1>
-            <h2 id="site-description"><a href="/log">Perfil Usuario</a></h2>
+            <h2 id="site-description">{{doc["name"]}}</h2>
+            <h2 id="site-description"><a href="/log">Usuario</a></h2>
         </hgroup>
     
     </header> <!-- #header -->
