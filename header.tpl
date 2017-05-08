@@ -1,43 +1,40 @@
-<!doctype html>
-<!--[if lt IE 7]> <html class="no-js ie6" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js ie7" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js ie8" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
-<head>
+<!DOCTYPE HTML>
+<!--
+	Intensify by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>Intensify by TEMPLATED</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="static2/assets/css/main.css" />
+	</head>
+	<body>
 
-    <meta charset="utf-8" />
+		<!-- Header -->
+			<header id="header">
+				<nav class="left">
+					<a href="#menu"><span>Menu</span></a>
+				</nav>
+				<a href="index.html" class="logo">intensify</a>
+				<nav class="right">
+					<a href="#" class="button alt">Log in</a>
+				</nav>
+			</header>
 
-    <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-
-    <title>PersonalOrder</title>
-
-    <meta name="description" content="" />
-    
-     <!-- Mobile viewport optimized: j.mp/bplateviewport -->
- 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <link href="/estilos/style.css" rel="stylesheet" />
-    <link href="http://fonts.googleapis.com/css?family=Droid+Serif:regular,bold" rel="stylesheet" /> <!-- Load Droid Serif from Google Fonts -->
-    
-    <!-- All JavaScript at the bottom, except for Modernizr and Respond.
-    	Modernizr enables HTML5 elements & feature detects; Respond is a polyfill for min/max-width CSS3 Media Queries -->
-    <script src="/estilos/js/modernizr-1.7.min.js"></script>
-    <script src="/estilos/js/respond.min.js"></script>
-</head>
-
-<body>
-
-<div id="wrapper">
-
-    <header id="header" class="clearfix" role="banner">
-    
-        <hgroup>
-            <h1 id="site-title"><a href="/"><img alt="logo" src="static/images/logopresonalorder.png"/></a></h1>
-            <h2 id="site-description">Administrador de eventos del calendario de Google, con funcionalidades de Google Maps!</h2>
-        </hgroup>
-    
-    </header> <!-- #header -->
+		<!-- Menu -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="generic.html">Generic</a></li>
+					<li><a href="elements.html">Elements</a></li>
+				</ul>
+				<ul class="actions vertical">
+					<li><a href="#" class="button fit">Login</a></li>
+				</ul>
+			</nav>    
     
 <!--				<li><a href="/">Inicio</a></li>
  -				<li><a href="/listareventos">Listar Eventos</a></li>
