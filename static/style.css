@@ -734,9 +734,8 @@ figcaption {
  */
  
 #footer {
-	color: #555;
+	color: white;
 	padding: 40px 20px;
-	text-shadow: 1px 1px 0px #fff;
 }
 
 #footer a {
