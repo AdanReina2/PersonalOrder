@@ -41,9 +41,9 @@
     
     <nav id="menu" class="clearfix" role="navigation">
         <ul> 
-            <li><a href="index.html">Inicio</a></li>
+            <li><a href="/">Inicio</a></li>
             <li>
-                <a href="about.html">Eventos</a>
+                <a href="/">Eventos</a>
                 <ul>
                     <li><a href="/listareventos">Listar Eventos</a></li>
  		    <li><a href="/formularionuevoevento">Crear Evento</a></li>
@@ -52,7 +52,7 @@
                 </ul>
             </li>
             <li>
-	        <a href="contact.html">Calendarios</a>
+	        <a href="/">Calendarios</a>
 	        <ul>
 		    <li><a href="/nuevocalendario">Crear Calendario</a></li>
  		    <li><a href="/borrarcalendario">Borrar Calendario</a></li>
