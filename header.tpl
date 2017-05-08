@@ -11,7 +11,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
     <title>PersonalOrder</title>
-    <link rel="shortcut icon" type="image/x-icon" href="static/images/logopresonalorder.png" />
+    <link rel="shortcut icon" type="image/x-icon" href="static/images/favicon.ico" />
 
     <meta name="description" content="" />
     
