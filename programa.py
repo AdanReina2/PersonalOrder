@@ -90,7 +90,7 @@ def listareventos():
 def formularionuevoevento():
     token = request.get_cookie("token", secret='some-secret-key')
     oauth2 = OAuth2Session(client_id, token=token)
-    url_base = 'https://www.googleapis.com/calendar/v3/calendars/'+idcal+'/events'
+    #url_base = 'https://www.googleapis.com/calendar/v3/calendars/'+idcal+'/events'
     payload = {'key':key}
     r3 = oauth2.get(url_base,params=payload)
     doc = json.loads(r3.content)
