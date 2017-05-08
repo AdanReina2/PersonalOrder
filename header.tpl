@@ -33,7 +33,7 @@
     <header id="header" class="clearfix" role="banner">
     
         <hgroup>
-            <h1 id="site-title"><a href="/"><img src="/static/images/logopresonalorder.png"/></a></h1>
+            <h1 id="site-title">PersonalOrder</h1>
             <h2 id="site-description"><a href="/log">Perfil Usuario</a></h2>
         </hgroup>
     
