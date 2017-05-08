@@ -67,6 +67,10 @@ def salir():
     response.set_cookie("token", '',max_age=0)
     redirect('/log')  
 
+@route('/formulariolistareventos')
+def formulariolistareventos():
+    return template('formulariolistareventos.tpl')
+
 @route('/listareventos')
 def listareventos():
     if token_valido():
