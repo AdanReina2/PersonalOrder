@@ -6,8 +6,3 @@
       <br></br>
       <INPUT type="submit" value="Crear Evento">
 </form>
-<<<<<<< HEAD
-%include('foot.tpl')
-=======
-%include('foot.tpl')
->>>>>>> 16e5bd944620e01a98f8e7bc6a080a3bc12d8660
