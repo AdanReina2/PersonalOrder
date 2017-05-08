@@ -845,7 +845,7 @@ select {
 
 /* Submit */
 input[type="submit"] {
-	color: #fff;
+	color: black;
 }
 
 input[type="submit"]:hover {
