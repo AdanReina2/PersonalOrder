@@ -312,7 +312,7 @@ table {
 		background: #fff;
 	}
 	
-	td, td img { vertical-align: top; height: 110px; width: 416px;}
+	td, td img { vertical-align: top;}
 	
 	/* tfoot */
 	tfoot td {
