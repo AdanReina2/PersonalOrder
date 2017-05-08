@@ -34,7 +34,7 @@
     
         <hgroup>
             <h1 id="site-title"><a href="/"><img src="/static/images/logopresonalorder.png"/></a></h1>
-            <h2 id="site-description">This is an awesome description of the site!</h2>
+            <h2 id="site-description">Gestor de Calendario de Google Calendar</h2>
         </hgroup>
     
     </header> <!-- #header -->
