@@ -70,9 +70,11 @@ def salir():
 @route('/listareventos')
 def listareventos():
     if token_valido():
+        idcal = request.forms.get('idcal')
         token = request.get_cookie("token", secret='some-secret-key')
         oauth2 = OAuth2Session(client_id, token=token)
-        r3 = oauth2.get('https://www.googleapis.com/calendar/v3/users/me/calendarList')
+        url_base = 'https://www.googleapis.com/calendar/v3/calendars'+idcal+'/events'
+        r3 = oauth2.get(url_base)
         doc = json.loads(r3.content)
         return template('listareventos.tpl',doc=doc)
 
