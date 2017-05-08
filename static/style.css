@@ -96,7 +96,7 @@ body {
 
 	/* Browsers who don't support gradients */
 	.no-cssgradients body {
-		background-image: url(images/bg.png);
+		background-image: url(images/6.jpg);
 		background-repeat: repeat;
 		background-attachment: fixed;
 	}
