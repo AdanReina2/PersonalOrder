@@ -34,18 +34,27 @@
     
         <hgroup>
             <h1 id="site-title"><a href="/"><img src="/static/images/logopresonalorder.png"/></a></h1>
-            <h2 id="site-description">Gestor de Calendario de Google Calendar</h2>
+            <h2 id="site-description"><a href="/log">Perfil Usuario</a></h2>
         </hgroup>
     
     </header> <!-- #header -->
     
-    <!-- 
-    <li><a href="/">Inicio</a></li>
- 					<li><a href="/listareventos">Listar Eventos</a></li>
- 					<li><a href="/formularionuevoevento">Crear Evento</a></li>
- 					<li><a href="/formularioborrarevento">Eliminar Evento</a></li>
- 					<li><a href="/modificarevento">Modificar Evento</a></li>
- 					<li><a href="/nuevocalendario">Crear Calendario</a></li>
- 					<li><a href="/borrarcalendario">Borrar Calendario</a></li>
- 					<li><a href="/log">Perfil Usuario</a></li>
-	-->
+    <nav id="menu" class="clearfix" role="navigation">
+        <ul> 
+            <li class="current"><a href="index.html">Inicio</a></li>
+            <li>
+                <a href="about.html">Eventos</a>
+                <ul>
+                    <li><a href="/listareventos">Listar Eventos</a></li>
+ 		    <li><a href="/formularionuevoevento">Crear Evento</a></li>
+		    <li><a href="/formularioborrarevento">Eliminar Evento</a></li>
+ 		    <li><a href="/modificarevento">Modificar Evento</a></li>
+                </ul>
+            </li>
+            <li><a href="contact.html">Calendarios</a></li>
+	        <ul>
+		    <li><a href="/nuevocalendario">Crear Calendario</a></li>
+ 		    <li><a href="/borrarcalendario">Borrar Calendario</a></li>
+                </ul>
+        </ul>
+    </nav> <!-- #nav -->
