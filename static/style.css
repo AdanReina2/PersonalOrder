@@ -99,7 +99,6 @@ html { overflow-y: scroll; -webkit-text-size-adjust: 100%; -ms-text-size-adjust:
  */
 
 a {
-	color: #0B00DB;
 	text-decoration: none;
 	-webkit-transition: all 100ms linear;
 	/*-moz-transition: all 100ms linear;*/
@@ -400,7 +399,11 @@ hr {
 	padding: 14px 20px;
 	margin-bottom: 5px;
 	text-shadow: 0 1px 0 #fff;
+}
+
+#site-description a {
 	color: #006783;
+
 }
 
 /**
@@ -741,6 +744,11 @@ figcaption {
 
 #footer a {
 	font: 14px 'Droid Serif', Georgia, serif;
+	color: white;
+}
+
+#span {
+	color: white;
 }
 
 /**
