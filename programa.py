@@ -74,7 +74,6 @@ def formulariolistareventos():
 @route('/listareventos',method='post')
 def listareventos():
     if token_valido():
-        nombres = []
         idcal = request.forms.get('idcal')
         token = request.get_cookie("token", secret='some-secret-key')
         oauth2 = OAuth2Session(client_id, token=token)
@@ -82,8 +81,7 @@ def listareventos():
         payload = {'key':key}
         r3 = oauth2.get(url_base,params=payload)
         doc = json.loads(r3.content)
-        for i in doc["summary"]:
-            nombres.append(i)
+        nombres = doc.values()
         return template('listareventos.tpl',nombres=nombres)
 
 @route('/formularionuevoevento')
