@@ -71,7 +71,7 @@ def salir():
 def formulariolistareventos():
     return template('formulariolistareventos.tpl')
 
-@route('/listareventos',method='get')
+@route('/listareventos',method='post')
 def listareventos():
     if token_valido():
         idcal = request.forms.get('idcal')
