@@ -88,7 +88,15 @@ def listareventos():
 
 @route('/formularionuevoevento')
 def formularionuevoevento():
-    return template('formularionuevoevento.tpl')
+    token = request.get_cookie("token", secret='some-secret-key')
+    oauth2 = OAuth2Session(client_id, token=token)
+    url_base = 'https://www.googleapis.com/calendar/v3/calendars/'+idcal+'/events'
+    payload = {'key':key}
+    r3 = oauth2.get(url_base,params=payload)
+    doc = json.loads(r3.content)
+    for i in doc["items"]:
+        lista.append(i["summary"])
+    return template('formularionuevoevento.tpl',)
 
 @route('/nuevoevento',method='post')
 def nuevoevento():
@@ -116,7 +124,7 @@ def nuevoevento():
             },
         }
         payload = {'key':key}
-        r4 = oauth2.post(url_base,data=event,params=payload,headers=headers)
+        r4 = oauth2.post(url_base,data=json.dumps(event),params=payload,headers=headers)
         return template('nuevoevento.tpl',estado=r4)
         
 @route('/formularioborrarevento')

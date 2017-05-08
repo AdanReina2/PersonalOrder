@@ -1,6 +1,7 @@
 %include('header.tpl')
 <h1>Introduce el ID del calendario donde quieres crear el nuevo evento.</h1>
 <form action="/nuevoevento" method="post">
+      <label>ID del calendario: </label>
       <select name="idnewevent">
             <option value="1">Windows Vista</option> 
             <option value="2">Windows 7</option> 
