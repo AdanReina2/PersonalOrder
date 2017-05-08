@@ -62,9 +62,6 @@ q:before, q:after { content: ""; content: none; }
 .clearfix:before, .clearfix:after { content: ""; display: table; }
 .clearfix:after { clear: both; }
 .clearfix { zoom: 1; }
-.clearfix2:before, .clearfix2:after { content: ""; display: table; }
-.clearfix2:after { clear: both; }
-.clearfix2 { zoom: 1; float: right;}
 /* End reset */
 
 
