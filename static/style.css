@@ -490,12 +490,12 @@ hr {
 input[type=submit],
 legend {
 	background: #0B00DB; /* Fallback */
-	background: -moz-linear-gradient(top, #0B00DB 0%, #f7387c 100%); /* FF 3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#0B00DB), color-stop(100%,#f7387c)); /* Chrome, Safari 4+ */
-	background: -webkit-linear-gradient(top, #0B00DB 0%,#f7387c 100%); /* Chrome 10+, Safari 5.1+ */
-	background: -o-linear-gradient(top, #0B00DB 0%,#f7387c 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top, #0B00DB 0%,#f7387c 100%); /* IE10+ */
-	background: linear-gradient(top, #0B00DB 0%,#f7387c 100%); /* W3C */
+	background: -moz-linear-gradient(top, #0B00DB 0%, #0B00DB 100%); /* FF 3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#0B00DB), color-stop(100%,#0B00DB)); /* Chrome, Safari 4+ */
+	background: -webkit-linear-gradient(top, #0B00DB 0%,#0B00DB 100%); /* Chrome 10+, Safari 5.1+ */
+	background: -o-linear-gradient(top, #0B00DB 0%,#0B00DB 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #0B00DB 0%,#0B00DB 100%); /* IE10+ */
+	background: linear-gradient(top, #0B00DB 0%,#0B00DB 100%); /* W3C */
 	
 	color: #fff;
 	border-color: transparent;
