@@ -467,6 +467,8 @@ hr {
 	border-radius: 5px;
 	display: block;
 	font: 14px 'Droid Serif', sans-serif;
+	font-weight: bold;
+	color: black;
 	padding: 14px 20px;
 	margin-bottom: 5px;
 	text-shadow: 0 1px 0 #fff;
