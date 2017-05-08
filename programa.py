@@ -80,7 +80,8 @@ def listareventos():
         url_base = 'https://www.googleapis.com/calendar/v3/calendars'+idcal+'/events'
         r3 = oauth2.get(url_base)
         doc = json.loads(r3.content)
-        return doc
+        estado = r3.status_code
+        return template('listareventos.tpl',estado=estado)
 
 @route('/formularionuevoevento')
 def formularionuevoevento():
