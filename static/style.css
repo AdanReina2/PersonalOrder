@@ -70,7 +70,7 @@ q:before, q:after { content: ""; content: none; }
  */
  
 body { 
-	color: #333;
+	color: white;
 	font: 16px/28px Georgia, 'Times New Roman', Times, serif;
 	
 	/* CSS3 gradient background pattern @credits http://leaverou.me/demos/css3-patterns.html */
@@ -491,12 +491,6 @@ hr {
 input[type=submit],
 legend {
 	background: white; /* Fallback */
-	background: -moz-linear-gradient(top, white 0%, white 100%); /* FF 3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,white), color-stop(100%,white)); /* Chrome, Safari 4+ */
-	background: -webkit-linear-gradient(top, white 0%,white 100%); /* Chrome 10+, Safari 5.1+ */
-	background: -o-linear-gradient(top, white 0%,white 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top, white 0%,white 100%); /* IE10+ */
-	background: linear-gradient(top, white 0%,white 100%); /* W3C */
 	
 	color: black;
 	border-color: transparent;
