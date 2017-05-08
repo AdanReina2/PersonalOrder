@@ -5,6 +5,7 @@
       <INPUT type="text" name="idoldcal">
       <label>ID del evento: </label>
       <INPUT type="text" name="idoldevent">
+      <br></br>
       <INPUT type="submit" value="Eliminar Evento">
 </form>
 %include('foot.tpl')
