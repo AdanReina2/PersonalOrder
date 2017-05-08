@@ -96,7 +96,7 @@ body {
 
 	/* Browsers who don't support gradients */
 	.no-cssgradients body {
-		background-image: url(images/bg.png);
+		background-image: url(images/6.jpg);
 		background-repeat: repeat;
 		background-attachment: fixed;
 	}
@@ -421,7 +421,7 @@ hr {
 
 	/* No support for rgba */
 	.no-rgba #main {
-		background: url(images/bg.png) repeat;
+		background: url(images/6.jpg) repeat;
 	}
 
 #content {
