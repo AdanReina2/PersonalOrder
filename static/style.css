@@ -75,12 +75,12 @@ body {
 	
 	/* CSS3 gradient background pattern @credits http://leaverou.me/demos/css3-patterns.html */
 	
-	background-image: url(images/legB7.png);
+	background-image: url(images/bg.png);
 	}
 
 	/* Browsers who don't support gradients */
 	.no-cssgradients body {
-		background-image: url(images/legB7.png);
+		background-image: url(images/bg.png);
 		background-repeat: repeat;
 		background-attachment: fixed;
 	}
