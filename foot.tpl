@@ -1,9 +1,9 @@
 <footer id="footer">
         <div class="inner">
-		<h2>Get In Touch</h2>
+		<h2>Contacta con nosotros</h2>
 		<ul class="actions">
-			<li><span class="icon fa-phone"></span> <a href="#">(000) 000-0000</a></li>
-			<li><span class="icon fa-envelope"></span> <a href="#">information@untitled.tld</a></li>
+			<li><span class="icon fa-phone"></span> <a href="#">956231982</a></li>
+			<li><span class="icon fa-envelope"></span> <a href="#">personalorder@herokuapp.com</a></li>
 			<li><span class="icon fa-map-marker"></span> 123 Somewhere Road, Nashville, TN 00000</li>
 		</ul>
 	</div>
