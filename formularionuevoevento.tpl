@@ -11,6 +11,7 @@
       <INPUT type="text" name="nameevent">
       <label>Localización del evento: </label>
       <INPUT type="text" name="locaevent">
+      <br></br>
       <INPUT type="submit" value="Crear Evento">
 </form>
 %include('foot.tpl')
