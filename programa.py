@@ -81,7 +81,8 @@ def listareventos():
         payload = {'key':key}
         r3 = oauth2.get(url_base,params=payload)
         doc = json.loads(r3.content)
-        return template('listareventos.tpl',doc=doc)
+        nombres = doc["summary"]
+        return template('listareventos.tpl',nombres=nombres)
 
 @route('/formularionuevoevento')
 def formularionuevoevento():

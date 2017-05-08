@@ -1,4 +1,4 @@
 %include('header.tpl')
 <h1>Listar eventos</h1>
-{{doc}}
+{{nombres}}
 %include('foot.tpl')
