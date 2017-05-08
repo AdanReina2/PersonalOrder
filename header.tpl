@@ -1,24 +1,45 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
-<title>Personal Order</title>
-<meta charset="iso-8859-1">
-<link rel="stylesheet" href="static/styles/layout.css" type="text/css">
-<!--[if lt IE 9]><script src="scripts/html5shiv.js"></script><![endif]-->
+
+    <meta charset="utf-8" />
+
+    <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    <title>PersonalOrder</title>
+
+    <meta name="description" content="" />
+    
+     <!-- Mobile viewport optimized: j.mp/bplateviewport -->
+ 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <link href="style.css" rel="stylesheet" />
+    <link href="http://fonts.googleapis.com/css?family=Droid+Serif:regular,bold" rel="stylesheet" /> <!-- Load Droid Serif from Google Fonts -->
+    
+    <!-- All JavaScript at the bottom, except for Modernizr and Respond.
+    	Modernizr enables HTML5 elements & feature detects; Respond is a polyfill for min/max-width CSS3 Media Queries -->
+    <script src="js/modernizr-1.7.min.js"></script>
+    <script src="js/respond.min.js"></script>
 </head>
+
 <body>
-<div class="wrapper row1">
-	<header id="header" class="clear">
-		<div id="hgroup">
-			<div>
-				<a href="/"><img alt="logo" src="static/images/logopresonalorder.png"/></a>
-				<h1><a>Personal Order</a></h1>
-				<h2><a>Administrador de eventos del calendario de Google, con funcionalidades de Google Maps</a></h2>
-			</div>
-		</div>
-    		<nav>
-      			<ul>
-        			<li><a href="/">Inicio</a></li>
+
+<div id="wrapper">
+
+    <header id="header" class="clearfix" role="banner">
+    
+        <hgroup>
+            <h1 id="site-title"><a href="/"><img alt="logo" src="static/images/logopresonalorder.png"/></a></h1>
+            <h2 id="site-description">Administrador de eventos del calendario de Google, con funcionalidades de Google Maps!</h2>
+        </hgroup>
+    
+    </header> <!-- #header -->
+    
+<!--				<li><a href="/">Inicio</a></li>
  -				<li><a href="/listareventos">Listar Eventos</a></li>
  -				<li><a href="/formularionuevoevento">Crear Evento</a></li>
  -				<li><a href="/formularioborrarevento">Eliminar Evento</a></li>
@@ -26,7 +47,4 @@
  -				<li><a href="/nuevocalendario">Crear Calendario</a></li>
  -				<li><a href="/borrarcalendario">Borrar Calendario</a></li>
  -				<li><a href="/log">Perfil Usuario</a></li>
-      			</ul>
-    		</nav>
-  	</header>
-</div>
+ -->
