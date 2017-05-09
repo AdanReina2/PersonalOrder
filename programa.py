@@ -168,8 +168,8 @@ def formularioborrarevento():
         oauth2 = OAuth2Session(client_id, token=token)
         url_base = 'https://www.googleapis.com/calendar/v3/users/me/calendarList'
         payload = {'key':key}
-        r11 = oauth2.get(url_base,params=payload)
-        doc = json.loads(r11.content)
+        r12 = oauth2.get(url_base,params=payload)
+        doc = json.loads(r12.content)
         contador = 1
         for i in doc["items"]:
             lista.append(i["summary"])
