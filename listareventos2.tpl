@@ -1,7 +1,7 @@
 %include('header.tpl',login=login)
 <h1>Listar eventos</h1>
-%for a in lista:
-	{{a}}<a href="/eliminarevento"><img src="static/images/cancel.png"></a>
+%for a,b in zip(lista,lista2):
+	{{a}}<form action="/eliminarevento/{{b}}" method="post"><INPUT type="submit" value="Borrar Evento"></form>
 	<br>
 %end
 %include('foot.tpl')
