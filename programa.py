@@ -141,7 +141,7 @@ def nuevoevento():
         }
         payload = {'key':key}
         r4 = oauth2.post(url_base,data=json.dumps(event),params=payload,headers=headers)
-        return template('nuevoevento.tpl',estado=r4,login=token_valido())
+        return template('nuevoevento.tpl',estado=r4,login=token_valido(),idnewevent=idnewevent,nameevent=nameevent)
         
 @route('/formularioborrarevento')
 def formularioborrarevento():
