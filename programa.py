@@ -160,7 +160,18 @@ def nuevoevento():
         
 @route('/formularioborrarevento')
 def formularioborrarevento():
-    return template('formularioborrarevento.tpl',login=token_valido())    
+    if token_valido():
+        lista = []
+        token = request.get_cookie("token", secret='some-secret-key')
+        oauth2 = OAuth2Session(client_id, token=token)
+        url_base = 'https://www.googleapis.com/calendar/v3/users/me/calendarList'
+        payload = {'key':key}
+        r11 = oauth2.get(url_base,params=payload)
+        doc = json.loads(r11.content)
+        contador = 1
+        for i in doc["items"]:
+            lista.append(i["summary"])
+    return template('formularioborrarevento.tpl',lista=lista,login=token_valido(),contador=contador)    
     
 @route('/eliminarevento',method='post')
 def eliminarevento():
