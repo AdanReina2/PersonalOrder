@@ -181,7 +181,7 @@ def eliminarevento():
         idevent = request.forms.get('idevent')
         token = request.get_cookie("token", secret='some-secret-key')
         oauth2 = OAuth2Session(client_id, token=token)
-        url_base = 'https://www.googleapis.com/calendar/v3/calendars/'+idnewdcal+'/events/'+idevent
+        url_base = 'https://www.googleapis.com/calendar/v3/calendars/'+idnewcal+'/events/'+idevent
         payload = {'key':key}
         r6 = oauth2.delete(url_base,params=payload)
     
