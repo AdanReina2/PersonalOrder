@@ -103,6 +103,7 @@ a {
 	-webkit-transition: all 100ms linear;
 	/*-moz-transition: all 100ms linear;*/
 	transition: all 100ms linear;
+	font-style: bold;
 }
 
 a:hover {
@@ -402,7 +403,7 @@ hr {
 }
 
 #site-description a {
-	color: #006783;
+	color: black;
 
 }
 
