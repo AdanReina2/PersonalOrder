@@ -35,6 +35,7 @@
     
         <hgroup>
             <h1 id="site-title"><a href="/">PersonalOrder</a></h1>
+            {{login}}
             <h2 id="site-description"><a href="/log">Login</a></h2>
         </hgroup>
     
