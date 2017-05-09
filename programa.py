@@ -67,6 +67,19 @@ def salir():
     response.set_cookie("token", '',max_age=0)
     redirect('/log')  
 
+def listarcalendarios():
+    if token_valido():
+        lista = []
+        token = request.get_cookie("token", secret='some-secret-key')
+        oauth2 = OAuth2Session(client_id, token=token)
+        url_base = 'https://www.googleapis.com/calendar/v3/users/me/calendarList'
+        payload = {'key':key}
+        r11 = oauth2.get(url_base,params=payload)
+        doc = json.loads(r11.content)
+        for i in doc["items"]:
+            lista.append(i["summary"])
+        return template('formularionuevoevento.tpl',lista=lista,login=token_valido())
+    
 @route('/formulariolistareventos')
 def formulariolistareventos():
     return template('formulariolistareventos.tpl',login=token_valido())
@@ -88,7 +101,17 @@ def listareventos():
 
 @route('/formularionuevoevento')
 def formularionuevoevento():
-    return template('formularionuevoevento.tpl',login=token_valido())
+    if token_valido():
+        lista = []
+        token = request.get_cookie("token", secret='some-secret-key')
+        oauth2 = OAuth2Session(client_id, token=token)
+        url_base = 'https://www.googleapis.com/calendar/v3/users/me/calendarList'
+        payload = {'key':key}
+        r11 = oauth2.get(url_base,params=payload)
+        doc = json.loads(r11.content)
+        for i in doc["items"]:
+            lista.append(i["summary"])
+        return template('formularionuevoevento.tpl',lista=lista,login=token_valido())
 
 @route('/nuevoevento',method='post')
 def nuevoevento():
