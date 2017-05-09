@@ -1,11 +1,14 @@
 %include('header.tpl',login=login)
 <h1>Introduce los datos del evento que quieres eliminar</h1>
-<form action="/eliminarevento" method="post">
-      <label>ID del Calendario: </label>
-      <INPUT type="text" name="idoldcal">
-      <label>ID del evento: </label>
-      <INPUT type="text" name="idoldevent">
+<form action="/listareventos2" method="post">
+      <label><p>Calendario a usar: </p></label>
+      <select name="idoldcal">
+            % for i in lista:
+                  <option value="{{i}}">{{i}}</option>
+                  contador = contador + 1
+            % end
+      </select>
       <br></br>
-      <INPUT type="submit" value="Eliminar Evento">
+      <INPUT type="submit" value="Ver Eventos">
 </form>
 %include('foot.tpl')
