@@ -296,7 +296,7 @@ table {
 		background: #fff;
 	}
 	
-	td, td img { vertical-align: top;}
+	td, td img { vertical-align: top; height: 200px, weight: 200px;}
 	
 	/* tfoot */
 	tfoot td {
