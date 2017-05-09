@@ -14,11 +14,10 @@ redirect_uri = 'https://personalorder.herokuapp.com/callback'
 scope = ['https://www.googleapis.com/auth/calendar','https://www.googleapis.com/auth/userinfo.profile']
 token_url = "https://accounts.google.com/o/oauth2/token"
 key = os.environ["KEY_API"]
-token_ok = " "
 
 @route('/')
 def inicio():
-    return template('inicio.tpl',key=key,login=token_ok)
+    return template('inicio.tpl',key=key,login=token_valido())
 
 def token_valido():
   token = request.get_cookie("token", secret='some-secret-key')
