@@ -1,4 +1,4 @@
-%include('header.tpl')
+%include('header.tpl',login=login)
 <h1>Listar eventos del calendario especificado</h1>
 <form action="/listareventos" method="post">
       <label>Nombre del Calendario: </label>

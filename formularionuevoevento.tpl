@@ -1,4 +1,4 @@
-%include('header.tpl')
+%include('header.tpl',login=login)
 <h1>Crear nuevo evento</h1>
 <form action="/nuevoevento" method="post">
       <label><p>Nombre del Calendario: </p></label>

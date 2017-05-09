@@ -1,4 +1,4 @@
-%include('header.tpl')
+%include('header.tpl',login=login)
 <h1>Bienvenido, estás en el sistema como {{doc["name"]}}</h1>
 <img src="{{doc["picture"]}}"/>
 <br></br>

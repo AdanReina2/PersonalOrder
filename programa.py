@@ -58,7 +58,7 @@ def info():
         oauth2 = OAuth2Session(client_id, token=token)
         r2 = oauth2.get('https://www.googleapis.com/oauth2/v1/userinfo')
         doc = json.loads(r2.content)
-        return template('datospersonales.tpl',doc=doc)
+        return template('datospersonales.tpl',doc=doc,login=token_valido())
     else:
         redirect('/calendar')
 
@@ -69,7 +69,7 @@ def salir():
 
 @route('/formulariolistareventos')
 def formulariolistareventos():
-    return template('formulariolistareventos.tpl')
+    return template('formulariolistareventos.tpl',login=token_valido())
 
 @route('/listareventos',method='post')
 def listareventos():
@@ -84,11 +84,11 @@ def listareventos():
         doc = json.loads(r3.content)
         for i in doc["items"]:
             lista.append(i["summary"])
-        return template('listareventos.tpl',lista=lista)
+        return template('listareventos.tpl',lista=lista,login=token_valido())
 
 @route('/formularionuevoevento')
 def formularionuevoevento():
-    return template('formularionuevoevento.tpl')
+    return template('formularionuevoevento.tpl',login=token_valido())
 
 @route('/nuevoevento',method='post')
 def nuevoevento():
@@ -117,11 +117,11 @@ def nuevoevento():
         }
         payload = {'key':key}
         r4 = oauth2.post(url_base,data=json.dumps(event),params=payload,headers=headers)
-        return template('nuevoevento.tpl',estado=r4)
+        return template('nuevoevento.tpl',estado=r4,login=token_valido())
         
 @route('/formularioborrarevento')
 def formularioborrarevento():
-    return template('formularioborrarevento.tpl')    
+    return template('formularioborrarevento.tpl',login=token_valido())    
     
 @route('/eliminarevento',method='post')
 def eliminarevento():
@@ -136,22 +136,22 @@ def eliminarevento():
     
         estado = r6.status_code
         if estado == 204:
-            return template('eliminareventobien.tpl')
+            return template('eliminareventobien.tpl',login=token_valido())
         else:
-            return template('eliminareventomal.tpl')
-    return template('eliminarevento.tpl')
+            return template('eliminareventomal.tpl',login=token_valido())
+    return template('eliminarevento.tpl',login=token_valido())
 
 @route('/modificarevento')
 def modificarevento():
-    return template('modificarevento.tpl')
+    return template('modificarevento.tpl',login=token_valido())
 
 @route('/nuevocalendario')
 def nuevocalendario():
-    return template('nuevocalendario.tpl')
+    return template('nuevocalendario.tpl',login=token_valido())
 
 @route('/borrarcalendario')
 def borrarcalendario():
-    return template('borrarcalendario.tpl')
+    return template('borrarcalendario.tpl',login=token_valido())
 
 @route('/static/<filepath:path>')
 def server_static(filepath):
