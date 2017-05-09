@@ -17,7 +17,7 @@ key = os.environ["KEY_API"]
 
 @route('/')
 def inicio():
-    return template('inicio.tpl',key=key)
+    return template('inicio.tpl',key=key,login=token_ok)
 
 def token_valido():
   token = request.get_cookie("token", secret='some-secret-key')
