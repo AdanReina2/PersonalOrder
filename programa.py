@@ -108,8 +108,8 @@ def listareventos():
         oauth2 = OAuth2Session(client_id, token=token)
         url_base = 'https://www.googleapis.com/calendar/v3/calendars/'+idcal+'/events'
         payload = {'key':key}
-        r3 = oauth2.get(url_base,params=payload)
-        doc = json.loads(r3.content)
+        r13 = oauth2.get(url_base,params=payload)
+        doc = json.loads(r13.content)
         for i in doc["items"]:
             lista.append(i["summary"])
         return template('listareventos2.tpl',lista=lista,login=token_valido())

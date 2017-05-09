@@ -2,7 +2,7 @@
 <h1>Introduce los datos del evento que quieres eliminar</h1>
 <form action="/listareventos2" method="post">
       <label><p>Calendario a usar: </p></label>
-      <select name="idoldcal">
+      <select name="idcal">
             % for i in lista:
                   <option value="{{i}}">{{i}}</option>
                   contador = contador + 1
