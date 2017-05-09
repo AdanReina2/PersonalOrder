@@ -346,8 +346,8 @@ hr {
 
 /* These selection declarations have to be separate
    Also: hot pink! */
-::-moz-selection{ background: white; color: #fff; text-shadow: none; }
-::selection { background: white; color: #fff; text-shadow: none; }
+::-moz-selection{ background: white; color: black; text-shadow: none; }
+::selection { background: white; color: black; text-shadow: none; }
 
 /**
  * Header
