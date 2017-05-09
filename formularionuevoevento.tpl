@@ -1,7 +1,7 @@
 %include('header.tpl',login=login)
 <h1>Crear nuevo evento</h1>
 <form action="/nuevoevento" method="post">
-      <select name="">
+      <select name="idnewevent">
             % for i in lista:
                   <option value="{{contador}}">{{i["summary"]}}</option>
                   contador = contador + 1
