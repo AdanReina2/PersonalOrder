@@ -58,7 +58,7 @@ def info():
         oauth2 = OAuth2Session(client_id, token=token)
         r2 = oauth2.get('https://www.googleapis.com/oauth2/v1/userinfo')
         doc = json.loads(r2.content)
-        return template('perfilusuario.tpl',doc=doc)
+        return template('datospersonales.tpl',doc=doc)
     else:
         redirect('/calendar')
 
