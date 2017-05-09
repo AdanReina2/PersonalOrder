@@ -173,7 +173,7 @@ def formularioborrarevento():
         contador = 1
         for i in doc["items"]:
             lista.append(i["summary"])
-    return template('formularioborrarevento.tpl',lista=lista,lista2=lista2,login=token_valido(),contador=contador)    
+    return template('formularioborrarevento.tpl',lista=lista,login=token_valido(),contador=contador)    
     
 @route('/eliminarevento',method='post')
 def eliminarevento():
