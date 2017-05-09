@@ -3,7 +3,7 @@
 <form action="/nuevoevento" method="post">
       <select name="idnewevent">
             % for i in lista:
-                  <option value="{{contador}}">{{i["summary"]}}</option>
+                  <option value="{{contador}}">{{i}}</option>
                   contador = contador + 1
             % end
       </select>
