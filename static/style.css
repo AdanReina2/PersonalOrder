@@ -404,7 +404,7 @@ hr {
 
 #site-description1 {
 	font: normal 14px 'Droid Serif', sans-serif;
-	float: right;
+	float: left;
 	padding-top: 32px;
 	background: #f3f3f3; /* Fallback */
 	background: -moz-linear-gradient(top, #f3f3f3 0%, #ececec 100%); /* FF 3.6+ */
