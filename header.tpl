@@ -35,8 +35,11 @@
     
         <hgroup>
             <h1 id="site-title"><a href="/">PersonalOrder</a></h1>
-            {{login}}
-            <h2 id="site-description"><a href="/log">Login</a></h2>
+            % if login != 'True':
+                <h2 id="site-description"><a href="/log">Login</a></h2>
+            % else:
+                <h2 id="site-description"><a href="/logout">Cerrar Sesión</a></h2>
+            % end
         </hgroup>
     
     </header> <!-- #header -->
