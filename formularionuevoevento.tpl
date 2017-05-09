@@ -1,6 +1,7 @@
 %include('header.tpl',login=login)
 <h1>Crear nuevo evento</h1>
 <form action="/nuevoevento" method="post">
+      <label><p>Calendario a usar: </p></label>
       <select name="idnewevent">
             % for i in lista:
                   <option value="{{contador}}">{{i}}</option>
