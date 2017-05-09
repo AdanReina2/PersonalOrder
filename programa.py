@@ -178,7 +178,7 @@ def formularioborrarevento():
 @route('/eliminarevento',method='post')
 def eliminarevento():
     if token_valido():
-        idcal = request.forms.get('idcal')
+        idnewcal = request.forms.get('idnewcal')
         idevent = request.forms.get('idevent')
         token = request.get_cookie("token", secret='some-secret-key')
         oauth2 = OAuth2Session(client_id, token=token)

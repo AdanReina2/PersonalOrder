@@ -1,8 +1,8 @@
 %include('header.tpl',login=login)
 <h1>Listar eventos</h1>
 %for a,b in zip(lista,lista2):
-	<form action="/nuevoevento" method="post">
-		<select name="idcal">
+<!--<form action="/nuevoevento" method="post">
+		<select name="idnewcal">
             <option value="{{idcal}}">{{idcal}}</option>
       	</select>
 		<select name="idevent">
@@ -11,6 +11,7 @@
             % end
       	</select>
       	<INPUT type="submit" value="Eliminar Evento">
-	</form>
+	</form>-->
+	<p>{{a}},{{b}}</p>
 %end
 %include('foot.tpl')
