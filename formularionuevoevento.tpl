@@ -1,8 +1,12 @@
 %include('header.tpl',login=login)
 <h1>Crear nuevo evento</h1>
 <form action="/nuevoevento" method="post">
-      <label><p>Nombre del Calendario: </p></label>
-      <INPUT type="text" name="idnewevent">
+      <select name="">
+            % for i in lista:
+                  <option value="{{contador}}">{{i["summary"]}}</option>
+                  contador = contador + 1
+            % end
+      </select>
       <label><p>Inicio del evento: </p></label>
       <INPUT type="text" name="startevent">
       <label><p>Final del evento: </p></label>
