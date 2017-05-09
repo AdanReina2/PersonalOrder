@@ -14,6 +14,7 @@ redirect_uri = 'https://personalorder.herokuapp.com/callback'
 scope = ['https://www.googleapis.com/auth/calendar','https://www.googleapis.com/auth/userinfo.profile']
 token_url = "https://accounts.google.com/o/oauth2/token"
 key = os.environ["KEY_API"]
+token_ok = " "
 
 @route('/')
 def inicio():
