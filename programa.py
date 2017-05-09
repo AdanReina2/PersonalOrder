@@ -187,10 +187,10 @@ def eliminarevento():
     
         estado = r6.status_code
         if estado == 204:
-            return template('eliminareventobien.tpl',login=token_valido())
+            return template('eliminareventobien.tpl',login=token_valido(),idevent=idevent,idnewcal=idnewcal)
         else:
-            return template('eliminareventomal.tpl',login=token_valido())
-    return template('eliminarevento.tpl',login=token_valido())
+            return template('eliminareventomal.tpl',login=token_valido(),idevent=idevent,idnewcal=idnewcal)
+    return template('eliminarevento.tpl',login=token_valido(),idevent=idevent,idnewcal=idnewcal)
 
 @route('/modificarevento')
 def modificarevento():
