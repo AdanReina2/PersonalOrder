@@ -103,6 +103,7 @@ def listareventos():
 def listareventos():
     if token_valido():
         lista = []
+        lista2 = []
         idcal = request.forms.get('idcal')
         token = request.get_cookie("token", secret='some-secret-key')
         oauth2 = OAuth2Session(client_id, token=token)
@@ -112,7 +113,8 @@ def listareventos():
         doc = json.loads(r13.content)
         for i in doc["items"]:
             lista.append(i["summary"])
-        return template('listareventos2.tpl',lista=lista,login=token_valido())
+            lista2.append(i["id"])
+        return template('listareventos2.tpl',lista=lista,lista2=lista2,login=token_valido(),idcal=idcal)
 
 @route('/formularionuevoevento')
 def formularionuevoevento():
@@ -162,7 +164,6 @@ def nuevoevento():
 def formularioborrarevento():
     if token_valido():
         lista = []
-        lista2 = []
         token = request.get_cookie("token", secret='some-secret-key')
         oauth2 = OAuth2Session(client_id, token=token)
         url_base = 'https://www.googleapis.com/calendar/v3/users/me/calendarList'
@@ -172,7 +173,6 @@ def formularioborrarevento():
         contador = 1
         for i in doc["items"]:
             lista.append(i["summary"])
-            lista2.append(i["id"])
     return template('formularioborrarevento.tpl',lista=lista,lista2=lista2,login=token_valido(),contador=contador)    
     
 @route('/eliminarevento',method='post')
