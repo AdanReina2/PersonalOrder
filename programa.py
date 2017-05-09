@@ -112,7 +112,7 @@ def formularionuevoevento():
         contador = 1
         for i in doc["items"]:
             lista.append(i["summary"])
-        return template('formularionuevoevento.tpl',lista=lista,login=token_valido())
+        return template('formularionuevoevento.tpl',lista=lista,login=token_valido(),contador=contador)
 
 @route('/nuevoevento',method='post')
 def nuevoevento():
