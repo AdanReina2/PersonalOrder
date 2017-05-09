@@ -178,8 +178,8 @@ def formularioborrarevento():
 @route('/eliminarevento',method='post')
 def eliminarevento():
     if token_valido():
-        idoldcal = request.forms.get('idoldcal')
-        idoldevent = request.forms.get('idoldevent')
+        idcal = request.forms.get('idcal')
+        idevent = request.forms.get('idevent')
         token = request.get_cookie("token", secret='some-secret-key')
         oauth2 = OAuth2Session(client_id, token=token)
         url_base = 'https://www.googleapis.com/calendar/v3/calendars/'+idoldcal+'/events/'+idoldevent
