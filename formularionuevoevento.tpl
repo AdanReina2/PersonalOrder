@@ -4,7 +4,7 @@
       <label><p>Calendario a usar: </p></label>
       <select name="idnewevent">
             % for i in lista:
-                  <option value="{{contador}}">{{i}}</option>
+                  <option value="{{i}}">{{i}}</option>
                   contador = contador + 1
             % end
       </select>
