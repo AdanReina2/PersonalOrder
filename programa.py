@@ -109,6 +109,7 @@ def formularionuevoevento():
         payload = {'key':key}
         r11 = oauth2.get(url_base,params=payload)
         doc = json.loads(r11.content)
+        contador = 1
         for i in doc["items"]:
             lista.append(i["summary"])
         return template('formularionuevoevento.tpl',lista=lista,login=token_valido())
