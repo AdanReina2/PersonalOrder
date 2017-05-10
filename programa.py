@@ -77,7 +77,8 @@ def listarcalendarios():
         r11 = oauth2.get(url_base,params=payload)
         doc = json.loads(r11.content)
         for i in doc["items"]:
-            lista.append(i["summary"])
+            if i["accessRole"] = "owner"
+                lista.append(i["summary"])
         return template('formularionuevoevento.tpl',lista=lista,login=token_valido())
     
 @route('/formulariolistareventos')
@@ -91,7 +92,8 @@ def formulariolistareventos():
         r11 = oauth2.get(url_base,params=payload)
         doc = json.loads(r11.content)
         for i in doc["items"]:
-            lista.append(i["summary"])
+            if i["accessRole"] = "owner"
+                lista.append(i["summary"])
     return template('formulariolistareventos.tpl',lista=lista,login=token_valido())
 
 @route('/listareventos',method='post')
