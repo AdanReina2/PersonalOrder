@@ -78,7 +78,7 @@ def listarcalendarios():
         doc = json.loads(r11.content)
         for i in doc["items"]:
             lista.append(i["summary"])
-        return template('formularionuevoevento.tpl',lista=lista,login=token_valido())
+        return template('formulariolistareventos.tpl',lista=lista,login=token_valido())
     
 @route('/formulariolistareventos')
 def formulariolistareventos():
