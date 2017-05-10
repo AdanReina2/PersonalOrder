@@ -139,7 +139,8 @@ def formularionuevoevento():
         r11 = oauth2.get(url_base,params=payload)
         doc = json.loads(r11.content)
         for i in doc["items"]:
-            lista.append(i["summary"])
+            if i["accessRole"] == "owner":
+                lista.append(i["summary"])
         return template('formularionuevoevento.tpl',lista=lista,login=token_valido())
 
 @route('/nuevoevento',method='post')
@@ -183,7 +184,8 @@ def formularioborrarevento():
         doc = json.loads(r12.content)
         contador = 1
         for i in doc["items"]:
-            lista.append(i["summary"])
+            if i["accessRole"] == "owner":
+                lista.append(i["summary"])
     return template('formularioborrarevento.tpl',lista=lista,login=token_valido(),contador=contador,doc=doc)    
     
 @route('/eliminarevento',method='post')
