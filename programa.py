@@ -187,7 +187,7 @@ def formularioborrarevento():
                 lista.append(i["summary"])
         return template('formularioborrarevento.tpl',lista=lista,login=token_valido(),doc=doc)    
     
-@route('/eliminarevento/<idevent>/<idncal>',method='get')
+@route('/eliminarevento/<idevent>/<idcal>',method='get')
 def eliminarevento(idevent,idcal):
     if token_valido():
         token = request.get_cookie("token", secret='some-secret-key')
