@@ -635,8 +635,8 @@ legend {
 .more-link:hover,
 input[type=submit]:hover {
 	border-radius: 0 10px 0 10px;
-	color: #fff;
-	opacity: 1;
+	color: black;
+	opacity: 0.75;
 }
 
 	/* Level 2 */
