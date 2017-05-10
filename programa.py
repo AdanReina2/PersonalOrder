@@ -187,11 +187,9 @@ def formularioborrarevento():
                 lista.append(i["summary"])
         return template('formularioborrarevento.tpl',lista=lista,login=token_valido(),doc=doc)    
     
-@route('/eliminarevento',method='post')
-def eliminarevento():
+@route('/eliminarevento/<idevent>/<idnewcal>',method='get')
+def eliminarevento(idevent,idnewcal):
     if token_valido():
-        idnewcal = request.forms.get('idnewcal')
-        idevent = request.forms.get('idevent')
         token = request.get_cookie("token", secret='some-secret-key')
         oauth2 = OAuth2Session(client_id, token=token)
         url_base = 'https://www.googleapis.com/calendar/v3/calendars/'+idnewcal+'/events/'+idevent
