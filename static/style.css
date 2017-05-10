@@ -920,7 +920,7 @@ button, input, select, textarea, label {
 label {
 	display: block;
 	font-weight: bold;
-	margin: 0 0 7px 10px;
+	margin: 16px 0 -20px 0px;
 }
 
 fieldset {
@@ -968,7 +968,7 @@ textarea {
 input[type="checkbox"],
 input[type="radio"],
 select {
-	margin-left: 10px;
+	margin-left: 0px;
 }
 
 /* Submit */
