@@ -7,5 +7,6 @@
             	<option value="{{a}}">{{a}}</option>
             %end
       	</select>
-	<INPUT type="submit" value="Eliminar Evento">
+      	<br>
+	<INPUT type="submit" value="Listar Eventos">
 </form>
