@@ -5,7 +5,7 @@
 	<tr>
 		<td>{{idcal}}</td>
       	<td>{{a}}</td>
-      	<td><a href="/eliminarevento/{{b}}/{{idnewcal}}">Eliminar</a></td>
+      	<td><a href="/eliminarevento/{{b}}/{{idcal}}">Eliminar</a></td>
     </tr>
 %end
 </table>

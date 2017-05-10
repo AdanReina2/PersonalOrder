@@ -187,21 +187,21 @@ def formularioborrarevento():
                 lista.append(i["summary"])
         return template('formularioborrarevento.tpl',lista=lista,login=token_valido(),doc=doc)    
     
-@route('/eliminarevento/<idevent>/<idnewcal>',method='get')
-def eliminarevento(idevent,idnewcal):
+@route('/eliminarevento/<idevent>/<idncal>',method='get')
+def eliminarevento(idevent,idcal):
     if token_valido():
         token = request.get_cookie("token", secret='some-secret-key')
         oauth2 = OAuth2Session(client_id, token=token)
-        url_base = 'https://www.googleapis.com/calendar/v3/calendars/'+idnewcal+'/events/'+idevent
+        url_base = 'https://www.googleapis.com/calendar/v3/calendars/'+idncal+'/events/'+idevent
         payload = {'key':key}
         r6 = oauth2.delete(url_base,params=payload)
     
         estado = r6.status_code
         if estado == 204:
-            return template('eliminareventobien.tpl',login=token_valido(),idevent=idevent,idnewcal=idnewcal)
+            return template('eliminareventobien.tpl',login=token_valido(),idevent=idevent,idcal=idcal)
         else:
-            return template('eliminareventomal.tpl',login=token_valido(),idevent=idevent,idnewcal=idnewcal)
-    return template('eliminarevento.tpl',login=token_valido(),idevent=idevent,idnewcal=idnewcal)
+            return template('eliminareventomal.tpl',login=token_valido(),idevent=idevent,idcal=idcal)
+    return template('eliminarevento.tpl',login=token_valido(),idevent=idevent,idnewcal=idcal)
 
 @route('/modificarevento')
 def modificarevento():
