@@ -11,20 +11,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
     <title>PersonalOrder</title>
-    <link rel="shortcut icon" type="image/x-icon" href="static/images/favicon.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="/static/images/favicon.ico" />
 
     <meta name="description" content="" />
     
      <!-- Mobile viewport optimized: j.mp/bplateviewport -->
  	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
-    <link href="static/style.css" rel="stylesheet" />
+    <link href="/static/style.css" rel="stylesheet" />
     <link href="http://fonts.googleapis.com/css?family=Droid+Serif:regular,bold" rel="stylesheet" /> <!-- Load Droid Serif from Google Fonts -->
     
     <!-- All JavaScript at the bottom, except for Modernizr and Respond.
     	Modernizr enables HTML5 elements & feature detects; Respond is a polyfill for min/max-width CSS3 Media Queries -->
-    <script src="static/js/modernizr-1.7.min.js"></script>
-    <script src="static/js/respond.min.js"></script>
+    <script src="/static/js/modernizr-1.7.min.js"></script>
+    <script src="/static/js/respond.min.js"></script>
 </head>
 
 <body>
