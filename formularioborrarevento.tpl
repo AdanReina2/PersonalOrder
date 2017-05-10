@@ -10,5 +10,4 @@
       <br></br>
       <INPUT type="submit" value="Ver Eventos">
 </form>
-{{doc}}
 %include('foot.tpl')
