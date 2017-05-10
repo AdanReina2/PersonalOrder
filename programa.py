@@ -184,8 +184,7 @@ def formularioborrarevento():
         doc = json.loads(r12.content)
         contador = 1
         for i in doc["items"]:
-            if i["accessRole"] == "owner":
-                lista.append(i["summary"])
+            lista.append(i["summary"])
         return template('formularioborrarevento.tpl',lista=lista,login=token_valido(),contador=contador,doc=doc)    
     
 @route('/eliminarevento',method='post')
