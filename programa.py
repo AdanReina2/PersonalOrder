@@ -203,8 +203,51 @@ def eliminarevento(idevent,idcal):
             return template('eliminareventomal.tpl',login=token_valido())
     return template('eliminarevento.tpl',login=token_valido())
 
-@route('/modificarevento')
-def modificarevento():
+@route('/formulariomodificarevento')
+def formulariomodificarevento():
+    if token_valido():
+        lista = []
+        lista2 = []
+        token = request.get_cookie("token", secret='some-secret-key')
+        oauth2 = OAuth2Session(client_id, token=token)
+        url_base = 'https://www.googleapis.com/calendar/v3/users/me/calendarList'
+        payload = {'key':key}
+        r11 = oauth2.get(url_base,params=payload)
+        doc = json.loads(r11.content)
+        for i in doc["items"]:
+            if i["accessRole"] == "owner":
+                lista.append(i["summary"])
+                lista2.append(i["id"])
+        return template('formulariomodificarevento.tpl',lista=lista,login=token_valido())
+
+@route('/formulariomodificareventos2/<idevent>/<idcal>',method='get')
+def formulariomodificarevento(idevent,idcal):
+    if token_valido():
+        return template('formulariomodificareventos2.tpl',lista=lista,login=token_valido(),idevent=idevent,idcal=idcal)
+
+@route('/modificarevento/<idevent>/<idcal>',method='get')
+def modificarevento(idevent,idcal):
+    if token_valido():
+        startevent = request.forms.get('startevent')
+        endevent = request.forms.get('endevent')
+        nameevent = request.forms.get('nameevent')
+        token = request.get_cookie("token", secret='some-secret-key')
+        oauth2 = OAuth2Session(client_id, token=token)
+        headers = {'Content-Type': 'application/json'}
+
+        url_base = 'https://www.googleapis.com/calendar/v3/calendars/'+idnewevent+'/events'
+        event = {
+            'summary': nameevent,
+            'start': {
+                'date': startevent,
+            },
+            'end': {
+                'date': endevent,
+            },
+        }
+        payload = {'key':key}
+        r4 = oauth2.put(url_base,data=json.dumps(event),params=payload,headers=headers)
+        return template('modificarevento.tpl',estado=r4,login=token_valido(),idnewevent=idnewevent,nameevent=nameevent)
     return template('modificarevento.tpl',login=token_valido())
 
 @route('/nuevocalendario')
