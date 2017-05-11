@@ -256,10 +256,10 @@ def modificarevento(idevent,idcal):
         event = {
             'summary': nameevent,
             'start': {
-                'date': startevent,
+                'datetime': startevent,
             },
             'end': {
-                'date': endevent,
+                'datetime': endevent,
             },
         }
         payload = {'key':key}
