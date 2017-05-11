@@ -252,7 +252,7 @@ def modificarevento(idevent,idcal):
         oauth2 = OAuth2Session(client_id, token=token)
         headers = {'Content-Type': 'application/json'}
 
-        url_base = 'https://www.googleapis.com/calendar/v3/calendars/'+idevent+'/events'
+        url_base = 'https://www.googleapis.com/calendar/v3/calendars/'+idcal+'/events'+idevent
         event = {
             'summary': nameevent,
             'start': {
