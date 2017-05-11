@@ -240,7 +240,7 @@ def listareventos():
 @route('/formulariomodificareventos2/<idevent>/<idcal>',method='get')
 def formulariomodificarevento(idevent,idcal):
     if token_valido():
-        return template('formulariomodificareventos2.tpl',lista=lista,login=token_valido(),idevent=idevent,idcal=idcal)
+        return template('formulariomodificareventos2.tpl',login=token_valido(),idevent=idevent,idcal=idcal)
 
 @route('/modificarevento/<idevent>/<idcal>',method='get')
 def modificarevento(idevent,idcal):
