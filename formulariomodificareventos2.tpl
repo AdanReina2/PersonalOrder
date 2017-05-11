@@ -5,6 +5,8 @@
       <INPUT type="text" name="endevent">
       <label><p>Nueva fecha de inicio: </p></label>
       <INPUT type="text" name="endevent">
+      <label><p>Nueva nombre del evento: </p></label>
+      <INPUT type="text" name="nameevent">
 </form>
 <a href="/modificarevento/{{idevent}}/{{idcal}}">Modificar Evento</a>
 %include('foot.tpl')

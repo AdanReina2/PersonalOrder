@@ -252,7 +252,7 @@ def modificarevento(idevent,idcal):
         oauth2 = OAuth2Session(client_id, token=token)
         headers = {'Content-Type': 'application/json'}
 
-        url_base = 'https://www.googleapis.com/calendar/v3/calendars/'+idnewevent+'/events'
+        url_base = 'https://www.googleapis.com/calendar/v3/calendars/'+idevent+'/events'
         event = {
             'summary': nameevent,
             'start': {
@@ -264,7 +264,7 @@ def modificarevento(idevent,idcal):
         }
         payload = {'key':key}
         r4 = oauth2.put(url_base,data=json.dumps(event),params=payload,headers=headers)
-        return template('modificarevento.tpl',estado=r4,login=token_valido(),idnewevent=idnewevent,nameevent=nameevent)
+        return template('modificarevento.tpl',estado=r4,login=token_valido(),idevent=idevent,nameevent=nameevent)
     return template('modificarevento.tpl',login=token_valido())
 
 @route('/nuevocalendario')
