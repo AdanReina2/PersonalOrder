@@ -220,6 +220,23 @@ def formulariomodificarevento():
                 lista2.append(i["id"])
         return template('formulariomodificarevento.tpl',lista=lista,login=token_valido())
 
+@route('/listareventos3',method='post')
+def listareventos():
+    if token_valido():
+        lista = []
+        lista2 = []
+        idcal = request.forms.get('idcal')
+        token = request.get_cookie("token", secret='some-secret-key')
+        oauth2 = OAuth2Session(client_id, token=token)
+        url_base = 'https://www.googleapis.com/calendar/v3/calendars/'+idcal+'/events'
+        payload = {'key':key}
+        r13 = oauth2.get(url_base,params=payload)
+        doc = json.loads(r13.content)
+        for i in doc["items"]:
+            lista.append(i["summary"])
+            lista2.append(i["id"])
+        return template('listareventos3.tpl',lista=lista,lista2=lista2,login=token_valido(),idcal=idcal)
+
 @route('/formulariomodificareventos2/<idevent>/<idcal>',method='get')
 def formulariomodificarevento(idevent,idcal):
     if token_valido():
