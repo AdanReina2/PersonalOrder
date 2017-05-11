@@ -7,6 +7,6 @@
       <INPUT type="text" name="endevent">
       <label><p>Nueva nombre del evento: </p></label>
       <INPUT type="text" name="nameevent">
+      <INPUT type="submit" value="Modificar Evento">
 </form>
-<a href="/modificarevento/{{idevent}}/{{idcal}}">Modificar Evento</a>
 %include('foot.tpl')
