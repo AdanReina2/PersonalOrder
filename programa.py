@@ -254,14 +254,15 @@ def modificarevento(idevent,idcal):
 
         url_base = 'https://www.googleapis.com/calendar/v3/calendars/'+idcal+'/events/'+idevent
         event = {
-            'summary': nameevent,
-            'start': {
-                'datetime': startevent,
+            "end": {
+                "date": endevent
             },
-            'end': {
-                'datetime': endevent,
+            "start": {
+                "date": startevent
             },
+            "summary": nameevent
         }
+
         payload = {'key':key}
         r4 = oauth2.put(url_base,data=json.dumps(event),params=payload,headers=headers)
         return template('modificarevento.tpl',estado=r4,login=token_valido(),idevent=idevent,nameevent=nameevent,startevent=startevent,endevent=endevent,idcal=idcal)
