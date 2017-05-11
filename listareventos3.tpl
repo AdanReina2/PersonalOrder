@@ -5,7 +5,7 @@
 	<tr>
 		<td>{{idcal}}</td>
       	<td>{{a}}</td>
-      	<td><a href="/formulariomodificareventos2.tpl/{{b}}/{{idcal}}">Modificar</a></td>
+      	<td><a href="/formulariomodificareventos2/{{b}}/{{idcal}}">Modificar</a></td>
     </tr>
 %end
 </table>
