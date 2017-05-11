@@ -1,6 +1,6 @@
 %include('header.tpl',login=login)
 <h1>Crear nuevo evento</h1>
-<form action="/modificareventos/{{idevent}}/{{idcal}}" method="post">
+<form action="/modificarevento/{{idevent}}/{{idcal}}" method="post">
       <label><p>Nueva fecha de inicio: </p></label>
       <INPUT type="text" name="startevent">
       <label><p>Nueva fecha de final: </p></label>
