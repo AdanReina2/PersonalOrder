@@ -1,5 +1,5 @@
 %include('header.tpl',login=login)
-<h1>{{estado}}</h1>
+<h1>{{estado.text}}</h1>
 <p>{{idcal}}<p>
 <p>{{idevent}}<p>
 <p>{{nameevent}}<p>
