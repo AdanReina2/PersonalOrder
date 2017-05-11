@@ -6,5 +6,5 @@
 <p>{{nameevent}}<p>
 <p>{{startevent}}<p>
 <p>{{endevent}}<p>
-<p>{{json.dumps(event)}}</p>
+{{datos}}
 %include('foot.tpl')

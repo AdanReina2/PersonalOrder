@@ -263,8 +263,9 @@ def modificarevento(idevent,idcal):
             },
         }
         payload = {'key':key}
-        r4 = oauth2.put(url_base,data=json.dumps(event),params=payload,headers=headers)
-        return template('modificarevento.tpl',estado=r4,login=token_valido(),idevent=idevent,nameevent=nameevent,startevent=startevent,endevent=endevent,idcal=idcal,event=event)
+        datos = json.dumps(event)
+        r4 = oauth2.put(url_base,data=datos,params=payload,headers=headers)
+        return template('modificarevento.tpl',estado=r4,login=token_valido(),idevent=idevent,nameevent=nameevent,startevent=startevent,endevent=endevent,idcal=idcal,datos=datos)
     return template('modificarevento.tpl',login=token_valido())
 
 @route('/nuevocalendario')
