@@ -309,10 +309,9 @@ def borrarcalendario():
         idcal = request.forms.get('idcal')
         token = request.get_cookie("token", secret='some-secret-key')
         oauth2 = OAuth2Session(client_id, token=token)
-        headers = {'Content-Type': 'application/json'}
         url_base = 'https://www.googleapis.com/calendar/v3/calendars/'
         payload = {'key':key}
-        r4 = oauth2.delete(url_base,params=payload,headers=headers)
+        r4 = oauth2.delete(url_base,params=payload)
         return template('borrarcalendario.tpl',login=token_valido())
     return template('borrarcalendario.tpl',login=token_valido())
 
