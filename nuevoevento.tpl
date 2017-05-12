@@ -3,6 +3,8 @@
 % if estado.status_code == 200:
 	<p>Se ha creado correctamente el evento {{nameevent}} en el calendario {{idnewevent}}</p>
 % else:
+	{{estado.status_code}}
+	{{estado.text}}
 	<p>No se ha creado correctamente el evento {{nameevent}} en el calendario {{idnewevent}}</p>
 % end
 %include('foot.tpl')
