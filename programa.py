@@ -303,7 +303,7 @@ def formulariomodificarevento():
                 lista.append(i["summary"])
         return template('formularioborrarcalendario.tpl',lista=lista,login=token_valido())
 
-@route('/borrarcalendario')
+@route('/borrarcalendario', method='get')
 def borrarcalendario():
     if token_valido():
         idcal = request.forms.get('idcal')
