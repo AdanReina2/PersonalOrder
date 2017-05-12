@@ -521,9 +521,9 @@ legend {
 	background: white; /* Fallback */
 	
 	color: black;
+	font-family: 'Droid Serif', sans-serif;
 	border-color: transparent;
 	border-radius: 10px 0 10px 0;
-	font-weight: bold;
 	padding: 14px 20px;
 	text-shadow: 0 1px 0 black;
 	-webkit-transition: all 100ms linear;
@@ -535,6 +535,7 @@ legend {
 .btn:hover,
 .more-link:hover,
 input[type=submit]:hover {
+	font-family: 'Droid Serif', sans-serif;
 	border-radius: 0 10px 0 10px;
 	color: #fff;
 	opacity: 1;
@@ -622,7 +623,6 @@ legend {
 	color: black;
 	border-color: transparent;
 	border-radius: 10px 0 10px 0;
-	font-weight: bold;
 	padding: 14px 20px;
 	text-shadow: 0 1px 0 black;
 	-webkit-transition: all 100ms linear;

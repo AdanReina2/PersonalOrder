@@ -267,8 +267,20 @@ def modificarevento(idevent,idcal):
         return template('modificarevento.tpl',estado=r4,login=token_valido(),idevent=idevent,nameevent=nameevent,startevent=startevent,endevent=endevent,idcal=idcal,datos=datos)
     return template('modificarevento.tpl',login=token_valido())
 
-@route('/nuevocalendario')
+@route('/nuevocalendario',method='post')
 def nuevocalendario():
+    if token_valido():
+        nombrecalendario = request.forms.get('nombrecalendario')
+        token = request.get_cookie("token", secret='some-secret-key')
+        oauth2 = OAuth2Session(client_id, token=token)
+        headers = {'Content-Type': 'application/json'}
+        url_base = 'https://www.googleapis.com/calendar/v3/calendars/'
+        event = {
+            'summary': nombrecalendario,
+        }
+        payload = {'key':key}
+        r4 = oauth2.post(url_base,data=json.dumps(event),params=payload,headers=headers)
+        return template('nuevoevento.tpl',login=token_valido(),nombrecalendario=nombrecalendario)
     return template('nuevocalendario.tpl',login=token_valido())
 
 @route('/borrarcalendario')
