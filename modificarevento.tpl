@@ -1,10 +1,3 @@
 %include('header.tpl',login=login)
-<h1>{{estado.text}}</h1>
-<h1>{{estado.url}}</h1>
-<p>{{idcal}}<p>
-<p>{{idevent}}<p>
-<p>{{nameevent}}<p>
-<p>{{startevent}}<p>
-<p>{{endevent}}<p>
-{{datos}}
+<h1>Se ha modificado el evento {{idevent}} del calendario {{idcal}}, ahora la fecha de inicio es {{startevent}} y la de final {{endevent}}</h1>
 %include('foot.tpl')
