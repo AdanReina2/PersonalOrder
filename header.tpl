@@ -59,8 +59,8 @@
             <li>
 	        <a href="/">Calendarios</a>
 	        <ul>
-		    <li><a href="/nuevocalendario">Crear Calendario</a></li>
- 		    <li><a href="/borrarcalendario">Borrar Calendario</a></li>
+		    <li><a href="/formularionuevocalendario">Crear Calendario</a></li>
+ 		    <li><a href="/formularioborrarcalendario">Borrar Calendario</a></li>
                 </ul>
 	    </li>
         </ul>

@@ -267,6 +267,11 @@ def modificarevento(idevent,idcal):
         return template('modificarevento.tpl',estado=r4,login=token_valido(),idevent=idevent,nameevent=nameevent,startevent=startevent,endevent=endevent,idcal=idcal,datos=datos)
     return template('modificarevento.tpl',login=token_valido())
 
+@route('/formularionuevocalendario')
+def formulariomodificarevento():
+    if token_valido():
+        return template('formularionuevocalendario.tpl',login=token_valido())
+
 @route('/nuevocalendario',method='post')
 def nuevocalendario():
     if token_valido():
@@ -280,11 +285,37 @@ def nuevocalendario():
         }
         payload = {'key':key}
         r4 = oauth2.post(url_base,data=json.dumps(event),params=payload,headers=headers)
-        return template('nuevoevento.tpl',login=token_valido(),nombrecalendario=nombrecalendario)
+        return template('nuevocalendario.tpl',login=token_valido(),nombrecalendario=nombrecalendario)
     return template('nuevocalendario.tpl',login=token_valido())
+
+@route('/formularioborrarcalendario')
+def formulariomodificarevento():
+    if token_valido():
+        lista = []
+        lista2 = []
+        token = request.get_cookie("token", secret='some-secret-key')
+        oauth2 = OAuth2Session(client_id, token=token)
+        url_base = 'https://www.googleapis.com/calendar/v3/users/me/calendarList'
+        payload = {'key':key}
+        r11 = oauth2.get(url_base,params=payload)
+        doc = json.loads(r11.content)
+        for i in doc["items"]:
+            if i["accessRole"] == "owner":
+                lista.append(i["summary"])
+                lista2.append(i["id"])
+        return template('formulariomodificarevento.tpl',lista=lista,login=token_valido())
 
 @route('/borrarcalendario')
 def borrarcalendario():
+    if token_valido():
+        idcal = request.forms.get('idcal')
+        token = request.get_cookie("token", secret='some-secret-key')
+        oauth2 = OAuth2Session(client_id, token=token)
+        headers = {'Content-Type': 'application/json'}
+        url_base = 'https://www.googleapis.com/calendar/v3/calendars/'
+        payload = {'key':key}
+        r4 = oauth2.post(url_base,params=payload,headers=headers)
+        return template('borrarcalendario.tpl',login=token_valido())
     return template('borrarcalendario.tpl',login=token_valido())
 
 @route('/static/<filepath:path>')
