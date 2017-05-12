@@ -242,7 +242,7 @@ def formulariomodificarevento(idevent,idcal):
     if token_valido():
         return template('formulariomodificareventos2.tpl',login=token_valido(),idevent=idevent,idcal=idcal)
 
-@route('/modificarevento/<idevent>/<idcal>',method='get')
+@route('/modificarevento/<idevent>/<idcal>',method='post')
 def modificarevento(idevent,idcal):
     if token_valido():
         startevent = request.forms.get('startevent')
