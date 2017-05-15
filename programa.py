@@ -303,7 +303,7 @@ def formulariomodificarevento():
             if i["accessRole"] == "owner":
                 lista.append(i["summary"])
                 lista2.append(i["id"])
-        return template('formularioborrarcalendario.tpl',lista=lista,login=token_valido())
+        return template('formularioborrarcalendario.tpl',lista=lista,lista2=lista2,login=token_valido())
 
 @route('/borrarcalendario', method='post')
 def borrarcalendario():
