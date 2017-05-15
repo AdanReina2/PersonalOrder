@@ -1,5 +1,5 @@
 %include('header.tpl',login=login)
-<h1>Crear nuevo evento</h1>
+<h1>Seleccionar el calendario para modificar los eventos:</h1>
 <form action="/listareventos3" method="post">
       <label><p>Calendario a usar: </p></label>
       <select name="idcal">
