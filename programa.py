@@ -312,8 +312,8 @@ def borrarcalendario():
         url_base = 'https://www.googleapis.com/calendar/v3/calendars/'
         payload = {'key':key}
         r4 = oauth2.delete(url_base,params=payload)
-        return template('borrarcalendario.tpl',login=token_valido())
-    return template('borrarcalendario.tpl',login=token_valido())
+        return template('borrarcalendario.tpl',login=token_valido(),estado=r4)
+    return template('borrarcalendario.tpl',login=token_valido(),estado=r4)
 
 @route('/static/<filepath:path>')
 def server_static(filepath):
