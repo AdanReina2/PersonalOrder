@@ -292,6 +292,7 @@ def nuevocalendario():
 def formulariomodificarevento():
     if token_valido():
         lista = []
+        lista2 = []
         token = request.get_cookie("token", secret='some-secret-key')
         oauth2 = OAuth2Session(client_id, token=token)
         url_base = 'https://www.googleapis.com/calendar/v3/users/me/calendarList'
@@ -301,6 +302,7 @@ def formulariomodificarevento():
         for i in doc["items"]:
             if i["accessRole"] == "owner":
                 lista.append(i["summary"])
+                lista2.append(i["id"])
         return template('formularioborrarcalendario.tpl',lista=lista,login=token_valido())
 
 @route('/borrarcalendario', method='post')
