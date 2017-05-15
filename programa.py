@@ -114,7 +114,7 @@ def listareventos():
                 lista2.append(i["location"])
             else:
                 lista2.append("null")
-        return template('listareventos.tpl',lista=lista,login=token_valido())
+        return template('listareventos.tpl',lista=lista,lista2=lista2,login=token_valido())
 
 @route('/listareventos2',method='post')
 def listareventos():
