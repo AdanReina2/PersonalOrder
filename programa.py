@@ -110,7 +110,7 @@ def listareventos():
         doc = json.loads(r3.content)
         for i in doc["items"]:
             lista.append(i["summary"])
-            if i["location"]:
+            if "location" in i:
                 lista2.append(i["location"])
             else:
                 lista2.append("null")
