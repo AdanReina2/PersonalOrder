@@ -1,7 +1,7 @@
 %include('header.tpl',login=login)
 <h1>Listar eventos</h1>
 <table>
-%for a,b in zip(lista,lista2):
+%for a,b,c in zip(lista,lista2,lista3):
 	<tr>
 		%if b == "null":
 			<td>{{a}}</td>
