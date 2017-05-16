@@ -101,7 +101,8 @@ def listareventos():
     if token_valido():
         lista = []
         lista2 = []
-        calendario = request.forms.get('calendario')
+        lista3 = []
+        idcal = request.forms.get('calendario')
         token = request.get_cookie("token", secret='some-secret-key')
         oauth2 = OAuth2Session(client_id, token=token)
         url_base = 'https://www.googleapis.com/calendar/v3/calendars/'+calendario+'/events'
@@ -114,7 +115,8 @@ def listareventos():
                 lista2.append(i["location"])
             else:
                 lista2.append("null")
-        return template('listareventos.tpl',lista=lista,lista2=lista2,login=token_valido())
+            lista3.append(i["id"])
+        return template('listareventos.tpl',lista=lista,lista2=lista2,lista3=lista3,idcal=idcal,login=token_valido())
 
 @route('/listareventos2',method='post')
 def listareventos():
