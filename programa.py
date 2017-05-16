@@ -110,10 +110,6 @@ def listareventos():
         doc = json.loads(r3.content)
         for i in doc["items"]:
             lista.append(i["summary"])
-            if "location" in i:
-                lista2.append(i["location"])
-            else:
-                lista2.append("null")
         return template('listareventos.tpl',lista=lista,lista2=lista2,login=token_valido())
 
 @route('/listareventos2',method='post')
@@ -321,6 +317,23 @@ def borrarcalendario():
         r4 = oauth2.delete(url_base,params=payload)
         return template('borrarcalendario.tpl',login=token_valido(),estado=r4)
     return template('borrarcalendario.tpl',login=token_valido(),estado=r4)
+
+@route('/formulariomapa')
+def formulariomapa():
+    if token_valido():
+        lista = []
+        lista2 = []
+        token = request.get_cookie("token", secret='some-secret-key')
+        oauth2 = OAuth2Session(client_id, token=token)
+        url_base = 'https://www.googleapis.com/calendar/v3/users/me/calendarList'
+        payload = {'key':key}
+        r11 = oauth2.get(url_base,params=payload)
+        doc = json.loads(r11.content)
+        for i in doc["items"]:
+            if i["accessRole"] == "owner":
+                lista.append(i["summary"])
+                lista2.append(i["id"])
+        return template('formularioborrarcalendario.tpl',lista=lista,lista2=lista2,login=token_valido())
 
 @route('/static/<filepath:path>')
 def server_static(filepath):
