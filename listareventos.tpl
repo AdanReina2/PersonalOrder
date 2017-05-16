@@ -1,6 +1,6 @@
 %include('header.tpl',login=login)
 <hgroup>
-    <h1>Listar eventos</h1>
+    <h1 class="titulo">Listar eventos</h1>
     <nav id="menu2" class="clearfix" role="navigation">
     	<ul> 
         	<li>
