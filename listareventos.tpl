@@ -1,7 +1,7 @@
 %include('header.tpl',login=login)
 <div>
 	<h1>Listar eventos</h1>
-	<nav id="menu2" class="clearfix" role="navigation">
+	<nav id="menu3" class="clearfix" role="navigation">
     <ul> 
         <li>
           	<a href="/formularionuevoevento">Crear nuevo evento</a>
