@@ -94,7 +94,7 @@ def formulariolistareventos():
         for i in doc["items"]:
             if i["accessRole"] == "owner":
                 lista.append(i["summary"])
-    return template('formulariolistareventos.tpl',lista=lista,login=token_valido())
+        return template('formulariolistareventos.tpl',lista=lista,login=token_valido())
 
 @route('/listareventos',method='post')
 def listareventos():
