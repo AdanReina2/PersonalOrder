@@ -111,7 +111,7 @@ def listareventos():
         for i in doc["items"]:
             lista.append(i["summary"])
             if "location" in i: 
-                lista2.append("Este evento no tiene localización")
+                lista2.append("null")
         return template('listareventos.tpl',lista=lista,lista2=lista2,login=token_valido())
 
 @route('/listareventos2',method='post')
