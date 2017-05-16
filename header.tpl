@@ -48,13 +48,7 @@
         <ul> 
             <li><a href="/">Inicio</a></li>
             <li>
-                <a href="/">Eventos</a>
-                <ul>
-                    <li><a href="/formulariolistareventos">Listar Eventos</a></li>
- 		    <li><a href="/formularionuevoevento">Crear Evento</a></li>
-		    <li><a href="/formularioborrarevento">Eliminar Evento</a></li>
- 		    <li><a href="/formulariomodificarevento">Modificar Evento</a></li>
-                </ul>
+                <a href="/formulariolistareventos">Eventos</a>
             </li>
             <li>
 	        <a href="/">Calendarios</a>
