@@ -8,7 +8,7 @@
 			<td></td>
 		%else:
 			<td>{{a}}</td>
-			<td>{{b}}</td>
+			<td>{{b}}<a href="/formulariomapa/{{b}}">Ver Distancia a este punto</td>
 		%end
       	<td><a href="/formulariomodificareventos2/{{c}}/{{idcal}}">Modificar</a></td>
       	<td><a href="/eliminarevento/{{c}}/{{idcal}}">Eliminar</a></td>
