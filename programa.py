@@ -110,6 +110,7 @@ def listareventos():
         doc = json.loads(r3.content)
         for i in doc["items"]:
             lista.append(i["summary"])
+            
         return template('listareventos.tpl',lista=lista,lista2=lista2,login=token_valido())
 
 @route('/listareventos2',method='post')
