@@ -4,7 +4,7 @@
 	%if b == "null":
 		<p>{{a}}</p>
 	%else:
-		<p>{{a}},{{b}}<p>
+		<p>{{a}} en {{b}}<p>
 	%end
 %end
 %include('foot.tpl')
