@@ -5,7 +5,7 @@
 	<tr>
 		%if b == "null":
 			<td>{{a}}</td>
-			<td>""</td>
+			<td></td>
 		%else:
 			<td>{{a}}</td>
 			<td>{{b}}</td>
