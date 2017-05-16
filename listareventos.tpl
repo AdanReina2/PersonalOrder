@@ -1,14 +1,5 @@
 %include('header.tpl',login=login)
-<hgroup>
-    <h1 class="titulo">Listar eventos</h1>
-    <nav id="menu2" class="clearfix" role="navigation">
-    	<ul> 
-        	<li>
-        		<a href="/formularionuevoevento">Crear nuevo evento</a>
-	 		</li>
-    	</ul>
-	</nav>
-</hgroup>
+<h1 class="titulo">Listar eventos</h1>
 <table>
 %for a,b,c in zip(lista,lista2,lista3):
 	<tr>
@@ -24,4 +15,11 @@
     </tr>
 %end
 </table>
+<nav id="menu2" class="clearfix" role="navigation">
+   	<ul> 
+       	<li>
+       		<a href="/formularionuevoevento">Crear nuevo evento</a>
+	 	</li>
+    </ul>
+</nav>
 %include('foot.tpl')
