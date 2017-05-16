@@ -1,9 +1,13 @@
 %include('header.tpl',login=login)
 <div>
 	<h1>Listar eventos</h1>
-	<form action="/nuevoevento" method="post">
-      <INPUT type="submit" value="Crear Evento">
-	</form>
+	<nav id="menu2" class="clearfix" role="navigation">
+    <ul> 
+        <li>
+          	<a href="/formularionuevoevento">Crear nuevo evento</a>
+	 	</li>
+    </ul>
+</nav>
 </div>
 <table>
 %for a,b,c in zip(lista,lista2,lista3):
@@ -20,4 +24,11 @@
     </tr>
 %end
 </table>
+<nav id="menu2" class="clearfix" role="navigation">
+    <ul> 
+        <li>
+          	<a href="/formularionuevoevento">Crear nuevo evento</a>
+	 	</li>
+    </ul>
+</nav>
 %include('foot.tpl')
