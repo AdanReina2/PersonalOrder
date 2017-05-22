@@ -355,7 +355,7 @@ def formulariomapa(posicion):
         payload = {'key':key}
         r11 = requests.get(url_base,params=payload)
         respuesta = r11.json()
-        a = respuesta.get["rows"][0]
+        a = respuesta.get("rows")[0]
         b = a.get("elements")
         c = b[0]
         distacia = c.get("distance").get("text")
