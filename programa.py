@@ -344,9 +344,10 @@ def formulariomapa(posicion):
     if token_valido():
         return template('formulariomapa.tpl',posicion=posicion,login=token_valido())
 
-@route('/vermapa/<posicion>/<nuevaposicion>')
-def formulariomapa(posicion,nuevaposicion):
+@route('/vermapa/<posicion>')
+def formulariomapa(posicion):
     if token_valido():
+        nuevaposicion = request.forms.get('nuevaposicion')
         token = request.get_cookie("token", secret='some-secret-key')
         oauth2 = OAuth2Session(client_id, token=token)
         url_base = 'https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins='+posicion+'destinations='+nuevaposicion
