@@ -354,10 +354,10 @@ def formulariomapa(posicion):
         payload = {'key':key}
         r11 = requests.get(url_base,params=payload)
         a = r11.text
-        b = (a.encode("utf-8")).get("rows")
-        c = b[0].get("elements")
-        distacia = c[0].get("distance").get("text")
-        duracion = c[0].get("duration").get("text")
+        b = a.get("rows")
+        c = b.get("elements")
+        distacia = c.get("distance").get("text")
+        duracion = c.get("duration").get("text")
         return template('vermapa.tpl',posicion=posicion,nuevaposicion=nuevaposicion,duracion=duracion,distancia=distancia,login=token_valido())
 
 @route('/static/<filepath:path>')
