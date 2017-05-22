@@ -352,9 +352,8 @@ def formulariomapa(posicion):
         oauth2 = OAuth2Session(client_id, token=token)
         url_base = 'https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins='+posicion+'destinations='+nuevaposicion
         payload = {'key':key}
-        r11 = oauth2.get(url_base,params=payload)
-        doc = json.loads(r11.content)
-        return template('vermapa.tpl',doc=doc,posicion=posicion,nuevaposicion=nuevaposicion,r11=r11,login=token_valido())
+        r11 = requests.get(url_base,params=payload)
+        return template('vermapa.tpl',r11=r11,login=token_valido())
 
 @route('/static/<filepath:path>')
 def server_static(filepath):
