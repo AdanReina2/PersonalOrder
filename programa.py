@@ -350,7 +350,7 @@ def formulariomapa(posicion):
         nuevaposicion = request.forms.get('nuevaposicion')
         token = request.get_cookie("token", secret='some-secret-key')
         oauth2 = OAuth2Session(client_id, token=token)
-        url_base = 'https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins='+posicion+'destinations='+nuevaposicion
+        url_base = 'https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins='+posicion+'&destinations='+nuevaposicion
         payload = {'key':key}
         r11 = requests.get(url_base,params=payload)
         return template('vermapa.tpl',r11=r11,login=token_valido())
