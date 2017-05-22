@@ -46,16 +46,14 @@
     
     <nav id="menu" class="clearfix" role="navigation">
         <ul> 
-            <li><a href="/">Inicio</a></li>
+            <li>
+                <a href="/">Inicio</a>
+            </li>
             <li>
                 <a href="/formulariolistareventos">Eventos</a>
             </li>
             <li>
-	        <a href="/">Calendarios</a>
-	        <ul>
-		    <li><a href="/formularionuevocalendario">Crear Calendario</a></li>
- 		    <li><a href="/formularioborrarcalendario">Borrar Calendario</a></li>
-                </ul>
-	    </li>
+	            <a href="/formulariolistarcalendarios">Calendarios</a>
+	        </li>
         </ul>
     </nav> <!-- #nav -->

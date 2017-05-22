@@ -274,6 +274,23 @@ def modificarevento(idevent,idcal):
         return template('modificarevento.tpl',estado=r4,login=token_valido(),idevent=idevent,nameevent=nameevent,startevent=startevent,endevent=endevent,idcal=idcal,datos=datos)
     return template('modificarevento.tpl',login=token_valido())
 
+@route('/formulariolistarcalendarios')
+def formulariolistarcalendarios():
+    if token_valido():
+        lista = []
+        lista2 = []
+        token = request.get_cookie("token", secret='some-secret-key')
+        oauth2 = OAuth2Session(client_id, token=token)
+        url_base = 'https://www.googleapis.com/calendar/v3/users/me/calendarList'
+        payload = {'key':key}
+        r11 = oauth2.get(url_base,params=payload)
+        doc = json.loads(r11.content)
+        for i in doc["items"]:
+            if i["accessRole"] == "owner":
+                lista.append(i["summary"])
+                lista2.append(i["id"])
+        return template('formulariolistarcalendarios.tpl',login=token_valido(),lista=lista,lista2=lista2)
+
 @route('/formularionuevocalendario')
 def formulariomodificarevento():
     if token_valido():
@@ -312,17 +329,15 @@ def formulariomodificarevento():
                 lista2.append(i["id"])
         return template('formularioborrarcalendario.tpl',lista=lista,lista2=lista2,login=token_valido())
 
-@route('/borrarcalendario', method='post')
-def borrarcalendario():
+@route('/borrarcalendario/<idcal>', method='post')
+def borrarcalendario(idcal):
     if token_valido():
-        idcal = request.forms.get('idcal')
         token = request.get_cookie("token", secret='some-secret-key')
         oauth2 = OAuth2Session(client_id, token=token)
         url_base = 'https://www.googleapis.com/calendar/v3/calendars/'+idcal
         payload = {'key':key}
         r4 = oauth2.delete(url_base,params=payload)
         return template('borrarcalendario.tpl',login=token_valido(),estado=r4)
-    return template('borrarcalendario.tpl',login=token_valido(),estado=r4)
 
 @route('/formulariomapa')
 def formulariomapa():
