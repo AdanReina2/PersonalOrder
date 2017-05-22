@@ -354,7 +354,7 @@ def formulariomapa(posicion):
         payload = {'key':key}
         r11 = oauth2.get(url_base,params=payload)
         doc = json.loads(r11.content)
-        return template('vermapa.tpl',doc=doc,posicion=posicion,nuevaposicion=nuevaposicion,login=token_valido())
+        return template('vermapa.tpl',doc=doc,posicion=posicion,nuevaposicion=nuevaposicion,r11=r11,login=token_valido())
 
 @route('/static/<filepath:path>')
 def server_static(filepath):
