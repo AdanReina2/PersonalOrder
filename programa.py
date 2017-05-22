@@ -359,6 +359,7 @@ def formulariomapa(posicion):
         b = a.get("elements")
         c = b[0]
         distancia = c.get("distance").get("text")
+        distancia = distancia.rstrip(" mi")
         distancia = float(distancia) * 1.60934
         duracion = c.get("duration").get("text")
         return template('vermapa.tpl',posicion=posicion,nuevaposicion=nuevaposicion,duracion=duracion,distancia=distancia,login=token_valido())
