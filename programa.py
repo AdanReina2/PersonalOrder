@@ -353,7 +353,7 @@ def formulariomapa(posicion):
         url_base = 'https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins='+posicion+'&destinations='+nuevaposicion
         payload = {'key':key}
         r11 = requests.get(url_base,params=payload)
-        a = r11["rows"][0]
+        a = r11.get["rows"][0]
         b = a.get("elements")
         c = b[0]
         distacia = c.get("distance").get("text")
