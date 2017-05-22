@@ -1,6 +1,4 @@
 %include('header.tpl',login=login)
 <h1>Distancia entre 2 puntos</h1>
-{{r11.text}}
-{{r11.status_code}}
-{{r11.url}}
+<p>Entre {{posicion}} y {{nuevaposicion}} hay un total de {{r11.text[0]["elements"][0]["distance"]["text"]}}</p>
 %include('foot.tpl')

@@ -353,7 +353,7 @@ def formulariomapa(posicion):
         url_base = 'https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins='+posicion+'&destinations='+nuevaposicion
         payload = {'key':key}
         r11 = requests.get(url_base,params=payload)
-        return template('vermapa.tpl',r11=r11,login=token_valido())
+        return template('vermapa.tpl',posicion=posicion,nuevaposicion=nuevaposicion,login=token_valido())
 
 @route('/static/<filepath:path>')
 def server_static(filepath):
