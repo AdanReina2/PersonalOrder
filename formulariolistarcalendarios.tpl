@@ -11,7 +11,7 @@
 <nav id="menu2" class="clearfix" role="navigation">
    	<ul> 
        	<li>
-       		<a href="/formularionuevoevento">Crear nuevo evento</a>
+       		<a href="/formularionuevocalendario">Crear nuevo Calendario</a>
 	 	</li>
     </ul>
 </nav>
