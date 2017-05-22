@@ -4,7 +4,7 @@
 %for a,b in zip(lista,lista2):
 	<tr>
 		<td>{{a}}</td>
-      	<td><a href="/eliminarcalendario/{{b}}">Eliminar</a></td>
+      	<td><a href="/borrarcalendario/{{b}}">Eliminar</a></td>
     </tr>
 %end
 </table>
