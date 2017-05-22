@@ -352,8 +352,9 @@ def formulariomapa(posicion):
         oauth2 = OAuth2Session(client_id, token=token)
         url_base = 'https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins='+posicion+'&destinations='+nuevaposicion
         payload = {'key':key}
-        r11 = requests.get(url_base,params=payload)
-        a = r11.text["rows"]
+        r11 = requests.forms.get(url_base,params=payload)
+        r12 = requests.get(r11)
+        a = r12.text["rows"]
         b = a[0].get("elements")
         distacia = b[0].get("distance").get("text")
         duracion = b[0].get("duration").get("text")
