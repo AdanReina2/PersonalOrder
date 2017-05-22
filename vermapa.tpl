@@ -1,4 +1,5 @@
 %include('header.tpl',login=login)
-<h1>Distancia entre 2 puntos</h1>
-<p>Entre {{posicion}} y {{nuevaposicion}} hay un total de {{distancia}} y un tiempo de {{duracion}}</p>
+<h1>Distancia entre {{posicion}} y {{nuevaposicion}}</h1>
+<p>Distancia en millas: {{distancia}}</p>
+<p>Tiempo de viaje: {{duracion}}</p>
 %include('foot.tpl')
