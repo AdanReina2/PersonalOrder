@@ -339,7 +339,7 @@ def borrarcalendario(idcal):
         r4 = oauth2.delete(url_base,params=payload)
         return template('borrarcalendario.tpl',login=token_valido(),estado=r4)
 
-@route('/formulariomapa/<posicion>',method='post')
+@route('/formulariomapa/<posicion>',method='get')
 def formulariomapa(posicion):
     if token_valido():
         return template('formulariomapa.tpl',posicion=posicion,login=token_valido())
