@@ -353,11 +353,10 @@ def formulariomapa(posicion):
         url_base = 'https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins='+posicion+'&destinations='+nuevaposicion
         payload = {'key':key}
         r11 = requests.get(url_base,params=payload)
-        a = r11.text
-        b = a.get("rows")
-        c = b.get("elements")
-        distacia = c.get("distance").get("text")
-        duracion = c.get("duration").get("text")
+        for a in r11.text["rows"]:
+            for b in a["elements"]: 
+                distacia = b.get("distance").get("text")
+                duracion = b.get("duration").get("text")
         return template('vermapa.tpl',posicion=posicion,nuevaposicion=nuevaposicion,duracion=duracion,distancia=distancia,login=token_valido())
 
 @route('/static/<filepath:path>')
