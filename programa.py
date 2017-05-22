@@ -344,7 +344,7 @@ def formulariomapa(posicion):
     if token_valido():
         return template('formulariomapa.tpl',posicion=posicion,login=token_valido())
 
-@route('/vermapa/<posicion>')
+@route('/vermapa/<posicion>',method='post')
 def formulariomapa(posicion):
     if token_valido():
         nuevaposicion = request.forms.get('nuevaposicion')
