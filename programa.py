@@ -347,13 +347,15 @@ def formulariomapa(posicion):
 @route('/vermapa/<posicion>',method='post')
 def formulariomapa(posicion):
     if token_valido():
+        lista = []
         nuevaposicion = request.forms.get('nuevaposicion')
         token = request.get_cookie("token", secret='some-secret-key')
         oauth2 = OAuth2Session(client_id, token=token)
         url_base = 'https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins='+posicion+'&destinations='+nuevaposicion
         payload = {'key':key}
         r11 = requests.get(url_base,params=payload)
-        a = r11.get["rows"][0]
+        respuesta = r11.json()
+        a = respuesta.get["rows"][0]
         b = a.get("elements")
         c = b[0]
         distacia = c.get("distance").get("text")
