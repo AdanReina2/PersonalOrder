@@ -329,7 +329,7 @@ def formulariomodificarevento():
                 lista2.append(i["id"])
         return template('formularioborrarcalendario.tpl',lista=lista,lista2=lista2,login=token_valido())
 
-@route('/borrarcalendario/<idcal>', method='post')
+@route('/borrarcalendario/<idcal>', method='get')
 def borrarcalendario(idcal):
     if token_valido():
         token = request.get_cookie("token", secret='some-secret-key')
