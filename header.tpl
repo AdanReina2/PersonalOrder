@@ -44,7 +44,7 @@
     
     </header> <!-- #header -->
     
-    <nav id="menu" class="clearfix">
+    <nav id="menu" class="clearfix" role="navigation">
         <ul> 
             <li>
                 <a href="/">Inicio</a>
@@ -57,4 +57,3 @@
 	        </li>
         </ul>
     </nav> <!-- #nav -->
-</div>
