@@ -44,7 +44,7 @@
     
     </header> <!-- #header -->
     
-    <nav id="menu" class="clearfix" role="navigation">
+    <nav id="menu" class="clearfix">
         <ul> 
             <li>
                 <a href="/">Inicio</a>
